@@ -1,0 +1,408 @@
+
+@font-face {
+    font-family: "Futura PT light";
+    src: url('../font/FuturaPT-Light.ttf');
+}
+
+@font-face {
+    font-family: "Futura PT book";
+    src: url('../font/FuturaPT-Book.ttf');
+}
+
+@font-face {
+    font-family: "TenorSans-Regular";
+    src: url('../font/TenorSans-Regular.ttf');
+}
+
+html, body {
+    margin: 0;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+h1, h2, p, li, td, label, select, option, input, button, textarea, span {
+    font-size: 1vw;
+    font-family: "Futura PT light", sans-serif;
+    color: #4B575C;
+    font-weight: 500;
+    margin: 0;
+}
+
+.the-biggest-text, .the-biggest-text > span {
+    font-family: TenorSans-Regular, sans-serif;
+    font-weight: 300;
+    color: #FFFFFF;
+    font-size: 9vw;
+    letter-spacing: 0.5vw;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.orange {
+    color: #F46244;
+}
+
+.button {
+    font-family: "Futura PT book", sans-serif;
+    padding: 0 2.1vw;
+    height: 2.5vw;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.8vw;
+    cursor: pointer;
+}
+
+.white-button {
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    background: transparent;
+}
+
+.white-button:hover {
+    color: #F46244;
+    background: #FFFFFF;
+}
+
+.orange-button {
+    color: #FFFFFF;
+    background: #F46244;
+}
+
+.orange-button:hover {
+    background: #ED5434;
+}
+
+
+#interface {
+    margin-top: 7vh;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+}
+
+#navPanel {
+    width: 90%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    width: 2.5vw;
+    cursor: pointer;
+}
+
+.round-button-holder {
+    background-color: white;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+
+#menuButton {
+    position: fixed;
+    left: 48.5vw;
+    flex-direction: column;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.03);
+}
+
+#menuButton:hover {
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.05);
+}
+
+.menu-button-line {
+    width: 1.6vw;
+    height: 1px;
+    background-color: #F46244;
+}
+
+#menuLine2 {
+    margin-top: 6px;
+}
+
+#chatHolder {
+    margin-top: 2vw;
+    position: fixed;
+    z-index: 10;
+    bottom: 2.5vw;
+    left: 92.1vw;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+}
+
+#chatButton {
+    width: 1.3vw;
+}
+
+#pageContent {
+    display: block;
+}
+
+#menuHolder {
+    background-color: #FFFFFF;
+    position: relative;
+    z-index: 5;
+    display: none;
+    height: 100vh;
+    justify-content: center;
+}
+
+#menuSpreader {
+    background-color: #F46244;
+    width: 0;
+}
+
+#menu {
+    position: relative;
+    width: 100%;
+    margin-top: 27vh;
+    display: none;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.menu-buttons:first-child {
+    margin-top: 0;
+}
+
+.menu-buttons {
+    font-family: "TenorSans-Regular", sans-serif;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 4.5vw;
+    letter-spacing: 0.05vw;
+    font-size: 1.5vw;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.menu-buttons:hover {
+    text-decoration: underline;
+}
+
+#languageSMHolder {
+    margin-top: 18vh;
+    display: flex;
+    align-items: center;
+}
+
+#socialMediaMenu {
+    width: 15vw;
+    height: 2.6vw;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.sm-holder-menu {
+    position: absolute;
+    width: 2.2vw;
+    height: 2.2vw;
+    background-color: transparent;
+}
+
+.sm-holder-menu:hover {
+    background-color: #f78973;
+}
+
+#instaButtonMenuHolder {
+    left: 42vw;
+}
+
+#fbButtonMenuHolder {
+    left: 47vw;
+}
+
+#telegramButtonMenuHolder {
+    left: 53vw;
+}
+
+#whatButtonMenuHolder {
+    left: 58vw;
+}
+
+.sm-button {
+    width: 1vw;
+    height: 1vw;
+}
+
+.language-holder {
+    display: flex;
+    align-items: center;
+}
+
+.language {
+    font-family: "TenorSans-Regular", sans-serif;
+    color: white;
+    font-size: 0.8vw;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.language:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.language-activated {
+    opacity: 1;
+}
+
+.language-slash {
+    background-color: #FFFFFF;
+    opacity: 0.5;
+    margin: 0 1.1vw;
+    width: 1.5vw;
+    height: 1px;
+}
+
+#menuLanguage {
+    position: absolute;
+    left: 5vw;
+}
+
+#footer {
+    padding-top: 25vh;
+}
+
+#contactsHolder {
+    display: flex;
+    align-items: center;
+}
+
+#contactHeaderHolder {
+    width: 50%;
+    height: 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #E3F1F6;
+}
+
+#contactHeader {
+    font-family: "TenorSans-Regular", sans-serif;
+    margin-right: 12vw;
+    font-size: 4vw;
+    color: #FFFFFF;
+}
+
+.orange-line {
+    width: 10vw;
+    height: 1px;
+    position: absolute;
+    z-index: 5;
+    background-color: #F46244;
+}
+
+#contactOrangeLine {
+    left: 45%;
+}
+
+#contacts {
+    margin-left: 12vw;
+}
+
+.number-holder, .contact-text {
+    font-family: "Futura PT book", sans-serif;
+}
+
+.number-holder {
+    margin-top: 2.5vw;
+    display: flex;
+}
+
+.number {
+    margin-left: 1vw;
+}
+
+.number > a {
+    text-decoration: none;
+    cursor: pointer;
+}
+.number > a:hover {
+    text-decoration: underline;
+}
+.number > a:link {
+    color: #4B575C;
+}
+.number > a:visited {
+    color: #4B575C;
+}
+
+#copyrightHolder {
+    margin-top: 4vw;
+    margin-bottom: 2.5vw;
+    display: flex;
+    align-items: flex-end;
+}
+
+.social-media {
+    width: 2.6vw;
+    margin-left: 5vw;
+    height: 15vw;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.what-buttonHolder:hover, .telegram-buttonHolder:hover, .fb-buttonHolder:hover, .insta-buttonHolder:hover {
+    background: none;
+}
+
+#languageCopyrightHolder {
+    margin-left: 10.6vw;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.4vw;
+}
+
+.language-page {
+    color: #4B575C;
+}
+
+.language-slash-page {
+    background-color: #4B575C;
+}
+
+#copyrightTextHolder {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    position: absolute;
+    left: 40%;
+}
+
+#copyrightText {
+    font-family: "Futura PT book", sans-serif;
+    font-size: 0.9vw;
+}
+
+@media screen and (max-width: 1024px) {
+    h1, h2, p, li, td, label, select, option, input, button, textarea, span {
+        font-size: 1.6vw;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    h1, h2, p, li, td, label, select, option, input, button, textarea, span {
+        font-size: 3.75vw;
+    }
+}
+
+@media screen and (min-height: 800px) and (max-height: 823px) {
+
+}

@@ -11,7 +11,104 @@
     {% block head %}{% endblock %}
 </head>
 <body>
-    
-    {% block body %}{% endblock %}
+    <article id="interface">
+        <nav id="navPanel">
+            <img onclick="openPage()" id="logo" src="{{ url_for('static', filename='img/logo.svg') }}" alt="logo">
+            <div id="menuButton" class="round-button-holder">
+                <div id="menuLine1" class="menu-button-line"></div>
+                <div id="menuLine2" class="menu-button-line"></div>
+            </div>
+            <button id="startProject" class="button orange-button" onclick="openPage('brief')">Начать проект</button>
+        </nav>
+    </article>
+    <div id="chatHolder">
+        <div id="chat"></div>
+        <div id="chatButtonHolder" class="round-button-holder">
+            <img id="chatButton" src="{{ url_for('static', filename='img/chat-button.svg') }}" alt="chat button">
+        </div>
+    </div>
+    <article id="pageContent">
+        {% block body %}{% endblock %}
+    </article>
+    <article id="menuHolder">
+        <article id="menuSpreader">
+            <section id="menu">
+                <nav id="menuNav">
+                    <p class="menu-buttons" onclick="openPage('we')">Мы</p>
+                    <p class="menu-buttons" onclick="openPage('cases')">Кейсы</p>
+                    <p class="menu-buttons" onclick="openPage('contacts')">Контакты</p>
+                    <p class="menu-buttons" onclick="openPage('vacations')">Вакансии</p>
+                </nav>
+                <div id="languageSMHolder">
+                    <div id="socialMediaMenu">
+                        <div id="instaButtonMenuHolder" class="round-button-holder sm-holder-menu" onclick="openInNewTab('')">
+                            <img id="instaButtonMenu" class="sm-button" src="{{ url_for('static', filename='img/insta-menu.svg') }}" alt="Instagram button">
+                        </div>
+                        <div id="fbButtonMenuHolder" class="round-button-holder sm-holder-menu" onclick="openInNewTab('')">
+                            <img id="fbButtonMenu" class="sm-button"  src="{{ url_for('static', filename='img/fb-menu.svg') }}" alt="Facebook button">
+                        </div>
+                        <div id="telegramButtonMenuHolder" class="round-button-holder sm-holder-menu" onclick="openInNewTab('')">
+                            <img id="telegramButtonMenu" class="sm-button" src="{{ url_for('static', filename='img/telegram-menu.svg') }}" alt="Telegram button">
+                        </div>
+                        <div id="whatButtonMenuHolder" class="round-button-holder sm-holder-menu" onclick="openInNewTab('')">
+                            <img id="whatButtonMenu" class="sm-button" src="{{ url_for('static', filename='img/what-menu.svg') }}" alt="What's up button">
+                        </div>
+                    </div>
+                    <div id="menuLanguage" class="language-holder">
+                        <p class="language language-activated">RU</p>
+                        <div class="language-slash"></div>
+                        <p class="language">EN</p>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </article>
+    {% if contact %}
+        <article id="footer">
+            <section id="contactsHolder">
+                <article id="contactHeaderHolder">
+                    <h1 id="contactHeader">CONTACT</h1>
+                </article>
+                <div id="contactOrangeLine" class="orange-line"></div>
+                <article id="contacts">
+                    <p class="contact-text">info@seeon</p>
+                    <section class="number-holder">
+                        <p class="contact-text">UA</p>
+                        <p class="number contact-text"><a href="tel:+380731030725">+380 73 103 07 25</a></p>
+                    </section>
+                    <section class="number-holder">
+                        <p class="contact-text">RU</p>
+                        <p class="number contact-text"><a href="tel:+74732299194">+7 (473) 229-91-94</a></p>
+                    </section>
+                </article>
+            </section>
+            <section id="copyrightHolder">
+                <article class="social-media">
+                    <div class="what-buttonHolder round-button-holder sm-holder-menu" onclick="openInNewTab('')">
+                        <img class="what-button sm-button" src="{{ url_for('static', filename='img/what.svg') }}" alt="What's up button">
+                    </div>
+                    <div class="telegram-buttonHolder round-button-holder sm-holder-menu" onclick="openInNewTab('')">
+                        <img class="telegram-button sm-button" src="{{ url_for('static', filename='img/telegram.svg') }}" alt="Telegram button">
+                    </div>
+                    <div class="fb-buttonHolder round-button-holder sm-holder-menu" onclick="openInNewTab('')">
+                        <img class="fb-button sm-button"  src="{{ url_for('static', filename='img/fb.svg') }}" alt="Facebook button">
+                    </div>
+                    <div class="insta-buttonHolder round-button-holder sm-holder-menu" onclick="openInNewTab('')">
+                        <img class="insta-button sm-button" src="{{ url_for('static', filename='img/insta.svg') }}" alt="Instagram button">
+                    </div>
+                </article>
+                <article id="languageCopyrightHolder">
+                    <article id="language" class="language-holder">
+                        <p class="language-page language language-activated">RU</p>
+                        <div class="language-slash-page language-slash"></div>
+                        <p class="language-page language">EN</p>
+                    </article>
+                    <article id="copyrightTextHolder">
+                        <p id="copyrightText">© «Seeon studio» | Privacy Policy</p>
+                    </article>
+                </article>
+            </section>
+        </article>
+    {% endif %}
 </body>
 </html>

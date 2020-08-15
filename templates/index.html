@@ -1,7 +1,44 @@
 {% extends 'pattern.html' %}
 
 {% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
 {% endblock %}
 
 {% block body %}
+    <article id="topHolder">
+        <section id="headerHolder">
+            <h1 id="theHeader" class="the-biggest-text">SEE<span>ON</span></h1>
+        </section>
+        <section id="showreelHolder">
+            <article id="ideasTextHolder">
+                <h1 id="ideasText">Мы воплощаем в жизнь самые амбициозные идеи!</h1>
+            </article>
+            <article id="showreel">
+                {# TODO CHAGNE FOR REAL SHOWREEL#}
+                <p class="rotated-text orange">Showreel</p>
+                <div id="playButtonHolder" class="round-button-holder">
+                    <div id="playButton" class="round-button-holder">
+                        <img id="playButtonImg" class="sm-button" src="{{ url_for('static', filename='img/play-button.svg') }}" alt="play showreel button">
+                    </div>
+                </div>
+                <img id="showreelVideo" src="{{ url_for('static', filename='img/showreel.png') }}" alt="showreel">
+            </article>
+        </section>
+
+        <section class="social-media">
+            <div class="what-buttonHolder round-button-holder sm-holder-menu" onclick="openInNewTab('')">
+                <img class="what-button sm-button" src="{{ url_for('static', filename='img/what.svg') }}" alt="What's up button">
+            </div>
+            <div class="telegram-buttonHolder round-button-holder sm-holder-menu" onclick="openInNewTab('')">
+                <img class="telegram-button sm-button" src="{{ url_for('static', filename='img/telegram.svg') }}" alt="Telegram button">
+            </div>
+            <div class="fb-buttonHolder round-button-holder sm-holder-menu" onclick="openInNewTab('')">
+                <img class="fb-button sm-button"  src="{{ url_for('static', filename='img/fb.svg') }}" alt="Facebook button">
+            </div>
+            <div class="insta-buttonHolder round-button-holder sm-holder-menu" onclick="openInNewTab('')">
+                <img class="insta-button sm-button" src="{{ url_for('static', filename='img/insta.svg') }}" alt="Instagram button">
+            </div>
+        </section>
+    </article>
 {% endblock %}
