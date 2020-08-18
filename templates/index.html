@@ -10,23 +10,34 @@
         <section id="headerHolder">
             <h1 id="theHeader" class="the-biggest-text">SEE<span>ON</span></h1>
         </section>
-        <section id="showreelHolder">
-            <article id="ideasTextHolder">
+        <section id="mainHolder">
+            <section id="ideasTextHolder">
+                <img src="{{ url_for('static', filename='img/contact-line.svg') }}" id="ideaOrangeLine" class="orange-line" alt="Orange line"/>
                 <h1 id="ideasText">Мы воплощаем в жизнь самые амбициозные идеи!</h1>
-            </article>
-            <article id="showreel">
-                {# TODO CHAGNE FOR REAL SHOWREEL#}
-                <p class="rotated-text orange">Showreel</p>
+            </section>
+            <section id="showreelHolder">
+                <p id="showreelText" class="small-text rotated-text orange">Showreel</p>
                 <div id="playButtonHolder" class="round-button-holder">
                     <div id="playButton" class="round-button-holder">
                         <img id="playButtonImg" class="sm-button" src="{{ url_for('static', filename='img/play-button.svg') }}" alt="play showreel button">
                     </div>
                 </div>
-                <img id="showreelVideo" src="{{ url_for('static', filename='img/showreel.png') }}" alt="showreel">
-            </article>
+                <article id="videoHolder">
+                    <img id="cross" src="{{ url_for('static', filename='img/cross.svg') }}" alt="close video"/>
+                    <video id="showreelVideo" autoplay loop muted>
+                        <source src="{{ url_for('static', filename='video/showreel.mp4') }}" type="video/mp4"/>
+                        <p>Your browser does not support the video.</p>
+                    </video>
+                </article>
+            </section>
         </section>
 
-        <section class="social-media">
+        <article id="scrollDownHolder">
+            <p class="small-text orange">Листайте вниз</p>
+            <div id="horizontalLine"></div>
+        </article>
+
+        <section id="mainSocialMenu" class="social-media">
             <div class="what-buttonHolder round-button-holder sm-holder-menu" onclick="openInNewTab('')">
                 <img class="what-button sm-button" src="{{ url_for('static', filename='img/what.svg') }}" alt="What's up button">
             </div>

@@ -16,33 +16,67 @@ function addLogoHover() {
     });
 }
 
-function addZoomInOutHover(element, imgIn = 'none', imgOut = 'none') {
+function addZoomInOutHover(element, imgIn = 'none', imgOut = 'none', horizontal = false) {
     $(element + "Holder").hover(() => {
         if (imgIn !== "none") $(element).attr("src", "../static/img/" + imgIn + ".svg");
-        $(element + "Holder").animate({
-            width: "+=0.4vw",
-            height: "+=0.4vw"
-        }, 100);
+        if (horizontal) {
+            $(element + "Holder").animate({
+                width: "+=0.4vw",
+                height: "+=0.4vw",
+                marginTop: "-=0.2vw"
+            }, 100);
+        }
+        else {
+            $(element + "Holder").animate({
+                width: "+=0.4vw",
+                height: "+=0.4vw",
+                left: "-=0.2vw"
+            }, 100);
+        }
     }, () => {
         if (imgOut !== 'none') $(element).attr("src", "../static/img/" + imgOut + ".svg");
-        $(element + "Holder").animate({
-            width: "-=0.4vw",
-            height: "-=0.4vw"
-        }, 100);
+        if (horizontal) {
+            $(element + "Holder").animate({
+                width: "-=0.4vw",
+                height: "-=0.4vw",
+                marginTop: "+=0.2vw"
+            }, 100);
+        }
+        else {
+            $(element + "Holder").animate({
+                width: "-=0.4vw",
+                height: "-=0.4vw",
+                left: "+=0.2vw"
+            }, 100);
+        }
     });
 }
 
 $(document).ready(() => {
-    addZoomInOutHover('#chatButton', 'chat-button-hover', 'chat-button');
     addZoomInOutHover('#instaButtonMenu');
     addZoomInOutHover('#fbButtonMenu');
     addZoomInOutHover('#telegramButtonMenu');
     addZoomInOutHover('#whatButtonMenu');
-    addZoomInOutHover('.insta-button', 'insta-hover', 'insta');
-    addZoomInOutHover('.fb-button','fb-hover','fb');
-    addZoomInOutHover('.what-button','what-hover', 'what');
-    addZoomInOutHover('.telegram-button', 'telegram-hover', 'telegram');
-    $('#chatButtonHolder').click(() => {
+    addZoomInOutHover('.insta-button', 'insta-hover', 'insta', true);
+    addZoomInOutHover('.fb-button','fb-hover','fb', true);
+    addZoomInOutHover('.what-button','what-hover', 'what', true);
+    addZoomInOutHover('.telegram-button', 'telegram-hover', 'telegram', true);
+
+    $('#chatButtonHolder').hover(() => {
+        $('#chatButton').attr("src", "../static/img/chat-button-hover.svg");
+        $("#chatButtonHolder").animate({
+            width: "+=0.4vw",
+            height: "+=0.4vw",
+            marginLeft: "-=0.2vw"
+        }, 100);
+    }, () => {
+        $('#chatButton').attr("src", "../static/img/chat-button.svg");
+        $("#chatButtonHolder").animate({
+            width: "-=0.4vw",
+            height: "-=0.4vw",
+            marginLeft: "+=0.2vw"
+        }, 100);
+    }).click(() => {
         // TODO ACTIVATE CHAT OR WHATEVER
         alert('CHAT')
     });
@@ -121,7 +155,7 @@ $(document).ready(() => {
                             step: function(now) {
                                 $(this).css({ transform: 'rotate(' + now + 'deg)' });
                             }
-                        }).css('margin-top', '6px');
+                        }).css('margin-top', '8px');
                 }
             });
         }

@@ -36,10 +36,6 @@ h1, h2, p, li, td, label, select, option, input, button, textarea, span {
     letter-spacing: 0.5vw;
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
-
 .orange {
     color: #F46244;
 }
@@ -129,7 +125,7 @@ h1, h2, p, li, td, label, select, option, input, button, textarea, span {
 }
 
 #menuLine2 {
-    margin-top: 6px;
+    margin-top: 8px;
 }
 
 #chatHolder {
@@ -141,6 +137,11 @@ h1, h2, p, li, td, label, select, option, input, button, textarea, span {
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-end;
+}
+
+#chatButtonHolder {
+    margin-top: 0vw;
+    margin-left: 0vw;
 }
 
 #chatButton {
@@ -208,6 +209,7 @@ h1, h2, p, li, td, label, select, option, input, button, textarea, span {
 }
 
 .sm-holder-menu {
+    margin-bottom: 0vw;
     position: absolute;
     width: 2.2vw;
     height: 2.2vw;
@@ -219,19 +221,19 @@ h1, h2, p, li, td, label, select, option, input, button, textarea, span {
 }
 
 #instaButtonMenuHolder {
-    left: 42vw;
+    left: 41.5vw;
 }
 
 #fbButtonMenuHolder {
-    left: 47vw;
+    left: 46.5vw;
 }
 
 #telegramButtonMenuHolder {
-    left: 53vw;
+    left: 51.5vw;
 }
 
 #whatButtonMenuHolder {
-    left: 58vw;
+    left: 56.5vw;
 }
 
 .sm-button {
@@ -301,7 +303,7 @@ h1, h2, p, li, td, label, select, option, input, button, textarea, span {
 
 .orange-line {
     width: 10vw;
-    height: 1px;
+    height: 0.5px;
     position: absolute;
     z-index: 5;
     background-color: #F46244;
@@ -328,18 +330,21 @@ h1, h2, p, li, td, label, select, option, input, button, textarea, span {
     margin-left: 1vw;
 }
 
-.number > a {
+.number > a, #privacyPolicy {
     text-decoration: none;
     cursor: pointer;
 }
-.number > a:hover {
+
+.number > a:link, #privacyPolicy:link {
+    color: #4B575C;
+}
+.number > a:visited, #privacyPolicy:visited {
+    color: #4B575C;
+}
+
+.number > a:hover, #privacyPolicy:hover {
+    color: #F46244;
     text-decoration: underline;
-}
-.number > a:link {
-    color: #4B575C;
-}
-.number > a:visited {
-    color: #4B575C;
 }
 
 #copyrightHolder {
@@ -359,8 +364,33 @@ h1, h2, p, li, td, label, select, option, input, button, textarea, span {
     align-items: center;
 }
 
+.small-text {
+    font-family: "Futura PT book", sans-serif;
+    font-size: 0.9vw;
+}
+
+.rotated-text {
+    transform: rotate(-90deg);
+}
+
+.contact-sm {
+    position: absolute;
+}
+
 .what-buttonHolder:hover, .telegram-buttonHolder:hover, .fb-buttonHolder:hover, .insta-buttonHolder:hover {
-    background: none;
+    background: #EAF5F8;
+}
+
+.telegram-buttonHolder {
+    margin-top: 4.5vw;
+}
+
+.fb-buttonHolder {
+    margin-top: 8.5vw;
+}
+
+.insta-buttonHolder {
+    margin-top: 12.5vw;
 }
 
 #languageCopyrightHolder {
@@ -372,6 +402,10 @@ h1, h2, p, li, td, label, select, option, input, button, textarea, span {
 
 .language-page {
     color: #4B575C;
+}
+
+.language-page:hover {
+    color: #F46244;
 }
 
 .language-slash-page {
@@ -389,6 +423,10 @@ h1, h2, p, li, td, label, select, option, input, button, textarea, span {
 #copyrightText {
     font-family: "Futura PT book", sans-serif;
     font-size: 0.9vw;
+}
+
+#privacyPolicy {
+
 }
 
 @media screen and (max-width: 1024px) {

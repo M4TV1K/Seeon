@@ -3,12 +3,12 @@
     display: flex;
     flex-flow: column nowrap;
     width: 100%;
-    height: 100vh;
+    height: 120vh;
     background: linear-gradient(to right, #E3F1F6 50%, #FFFFFF 50%);
 }
 
 #headerHolder {
-    margin-top: 6.5vw;
+    margin-top: 7.5vw;
     display: flex;
     justify-content: center;
 }
@@ -19,32 +19,57 @@
     margin-right: 1.5vw;
 }
 
-#showreelHolder {
-    margin-top: 4vw;
+#mainHolder {
+    height: 21vw;
+    margin-top: 4.5vw;
     position: relative;
     z-index: 5;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
-#showreel {
+#ideasTextHolder {
     display: flex;
     align-items: center;
 }
 
+#ideasText {
+    font-family: TenorSans-Regular, sans-serif;
+    font-size: 2.5vw;
+    width: 33vw;
+    margin-left: 19.5vw;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#showreelHolder {
+    display: flex;
+    align-items: center;
+}
+
+#showreelText {
+    margin-right: 2vw;
+}
+
+#cross {
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    top: 6vh;
+    right: 4vw;
+    display: none;
+    width: 2vw;
+}
+
 #showreelVideo {
-    width: 25vw;
+    width: 36vw;
 }
 
 #theHeader > span {
     color: #E3F1F6;
-}
-
-.rotated-text {
-    font-family: "Futura PT book", sans-serif;
-    font-size: 0.8vw;
-    transform: rotate(-90deg);
 }
 
 #playButtonHolder {
@@ -55,11 +80,35 @@
     height: 3vw;
     position: absolute;
     z-index: 6;
-    left: 46.5vw;
+    left: 62.5vw;
     background-color: #f0f2f5;
     border-radius: 100px;
 }
 
 #playButtonImg {
     margin-left: 0.2vw;
+}
+
+#mainSocialMenu {
+    position: absolute;
+    z-index: 6;
+    bottom: 2.5vw;
+}
+
+#scrollDownHolder {
+    margin-top: 10vw;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+#scrollDownHolder > .small-text {
+    text-align: center;
+}
+
+#horizontalLine {
+    background-color: #F46244;
+    margin-top: 1vw;
+    width: 0.5px;
+    height: 10vw;
 }
