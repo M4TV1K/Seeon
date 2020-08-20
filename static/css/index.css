@@ -39,10 +39,6 @@
     margin-left: 19.5vw;
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
-
 #showreelHolder {
     display: flex;
     align-items: center;

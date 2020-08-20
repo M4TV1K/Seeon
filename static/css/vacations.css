@@ -1,0 +1,76 @@
+
+#content {
+    display: flex;
+    justify-content: center;
+    margin-top: 30vh;
+}
+
+#superContentHolder {
+    display: flex;
+    width: 74%;
+    justify-content: space-between;
+}
+
+#vacationOrangeLine {
+    width: 7.5vw;
+    left: 43vw;
+    margin-top: 1.6vw;
+}
+
+
+#header {
+    margin-bottom: 1.5vw;
+}
+
+#subHeader {
+    width: 23vw;
+}
+
+#theForm {
+    margin-right: 3vw;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.input-holder {
+    height: 2vw;
+}
+
+.resume-button {
+    background-color: #FFFFFF;
+    border: 1px solid #F46244;
+    color: #F46244;
+}
+
+.resume-button:hover {
+    color: white;
+    background-color: #F46244;
+}
+
+#nameHolder {
+    width: 100%;
+}
+
+#name {
+    width: 96.2%;
+}
+
+#abilities {
+    width: 110%;
+}
+
+#emailPhoneHolder, #textHolder, #submitResumeHolder {
+    margin-top: 2.5vw;
+}
+
+#emailPhoneHolder {
+    display: flex;
+}
+
+#numberHolder {
+    margin-left: 2vw;
+}
+
+#footer {
+    padding-top: 10vh;
+}

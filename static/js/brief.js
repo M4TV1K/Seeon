@@ -35,9 +35,33 @@ function showError(element) {
     }, 2500);
 }
 
-// TODO FIX RADIO BUTTON, ADD SHOWING OFF ANIMATION TO INPUT WITH ABSOLUTE SHIT POSITION
+function focusInput(input) {
+    $('#' + input)
+        .click(() => {
+            if (!$('#' + input + 'Label').text().includes(':')) {
+                $('#' + input + 'Label').animate({
+                    top: "-=1.2vw",
+                    left: "-=0.5vw",
+                    fontSize: "-=0.2vw"
+                }, 200).text($('#' + input + 'Label').text() + ':');
+            }
+        }).focusout(() => {
+            if ($('#' + input).val() === "") {
+                let text = $('#' + input + 'Label').text();
+                text = text.substring(0, text.length - 1);
+                $('#' + input + 'Label').animate({
+                    top: "+=1.2vw",
+                    left: "+=0.5vw",
+                    fontSize: "+=0.2vw"
+                }, 200).text(text);
+            }
+        });
+}
 
 $(document).ready(() => {
+    focusInput('name');
+    focusInput('email');
+    focusInput('number');
 
     $("#submitRequest").click(() => {
         if (services.length === 0) {

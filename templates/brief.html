@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/brief.css') }}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{{ url_for('static', filename='js/pattern.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/brief.js') }}"></script>
 </head>
 <body>
     <article id="interface">
@@ -69,13 +68,19 @@
                 <div id="blueContactRectangle" class="blue-rectangle"></div>
                 <article id="contactHolder" class="data-block">
                     <h2 class="tenor-sans-font">Контактные данные:</h2>
-                    <section id="nameHolder">
-                        <label id="nameLabel" for="name">Имя</label>
+                    <section id="nameHolder" class="input-holder">
+                        <label id="nameLabel" class="placeholder-label" for="name">Имя</label>
                         <input class="text-input" id="name" name="name" type="text" maxlength="75" required>
                     </section>
                     <section id="emailPhoneHolder">
-                        <input class="text-input" id="email" name="email" type="email" maxlength="75" placeholder="Email" required>
-                        <input class="text-input" id="number" name="number" type="text" maxlength="75" placeholder="Номер телефона" required>
+                        <section id="emailHolder" class="input-holder">
+                            <label id="emailLabel" class="placeholder-label" for="email">Email</label>
+                            <input class="text-input" id="email" name="email" type="email" maxlength="75" required>
+                        </section>
+                        <section id="numberHolder" class="input-holder">
+                            <label id="numberLabel" class="placeholder-label" for="number">Номер телефона</label>
+                            <input class="text-input" id="number" name="number" type="text" maxlength="75" required>
+                        </section>
                     </section>
                     <section id="contactViaHolder">
                         <div class="checkbox-pair">

@@ -1,0 +1,42 @@
+
+#pageContent {
+    margin-top: 36vh;
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+}
+
+#superContentHolder {
+    width: 55%;
+}
+
+#thanksOrangeLine {
+    margin-top: 1.1vw;
+    left: 5vw;
+}
+
+#thanksHeader {
+    font-size: 1.8vw;
+}
+
+#returnButton {
+    margin-top: 2.25vw;
+}
+
+#leftBlueRectangle, #rightBlueRectangle {
+    bottom: 0;
+}
+
+#leftBlueRectangle {
+    left: 0;
+    width: 5vw;
+    height: 25vw;
+}
+
+#rightBlueRectangle {
+    right: 0;
+    width: 27.5vw;
+    height: 22.5vw;
+}

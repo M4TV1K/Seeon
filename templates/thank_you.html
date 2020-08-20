@@ -1,0 +1,22 @@
+{% extends 'pattern.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/thank_you.css') }}">
+    <script src="{{ url_for('static', filename='js/thank_you.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+    <article id="content">
+        <article id="superContentHolder">
+            <img src="{{ url_for('static', filename='img/contact-line.svg') }}" id="thanksOrangeLine" class="orange-line" alt="Orange line"/>
+            <section id="thanksHolder">
+                <h1 id="thanksHeader" class="header-text orange tenor-sans-font">Заявка отправлена, скоро мы с вами свяжемся</h1>
+            </section>
+            <section id="returnButtonHolder">
+                <button id="returnButton" class="button orange-button" onclick="openPage()">Супер!</button>
+            </section>
+        </article>
+        <section id="leftBlueRectangle" class="blue-rectangle"></section>
+        <section id="rightBlueRectangle" class="blue-rectangle"></section>
+    </article>
+{% endblock %}

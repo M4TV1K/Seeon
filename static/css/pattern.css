@@ -20,12 +20,25 @@ html, body {
     scrollbar-width: none;  /* Firefox */
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 h1, h2, p, li, td, label, select, option, input, button, textarea, span {
     font-size: 1vw;
     font-family: "Futura PT light", sans-serif;
     color: #4B575C;
     font-weight: 500;
     margin: 0;
+}
+
+textarea {
+    padding: 1vw 1vw;
+    width: 46%;
+    height: 10vw;
+    background: #F7F7F7;
+    border: none;
+    outline: none;
 }
 
 .text-input {
@@ -77,7 +90,7 @@ h1, h2, p, li, td, label, select, option, input, button, textarea, span {
     height: 2.5vw;
     outline: none;
     border: none;
-    border-radius: 20px;
+    border-radius: 100px;
     font-size: 0.8vw;
     cursor: pointer;
 }
@@ -147,11 +160,11 @@ h1, h2, p, li, td, label, select, option, input, button, textarea, span {
     position: fixed;
     left: 48.5vw;
     flex-direction: column;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
 #menuButton:hover {
-    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
 }
 
 .menu-button-line {
@@ -205,7 +218,7 @@ h1, h2, p, li, td, label, select, option, input, button, textarea, span {
 #menu {
     position: relative;
     width: 100%;
-    margin-top: 27vh;
+    margin-top: 27vh; /*27vh*/
     display: none;
     flex-flow: column nowrap;
     align-items: center;
@@ -230,7 +243,7 @@ h1, h2, p, li, td, label, select, option, input, button, textarea, span {
 }
 
 #languageSMHolder {
-    margin-top: 18vh;
+    margin-top: 18vh; /*18vh*/
     display: flex;
     align-items: center;
 }
@@ -311,7 +324,7 @@ h1, h2, p, li, td, label, select, option, input, button, textarea, span {
 }
 
 #footer {
-    padding-top: 25vh;
+    padding-top: 20vh;
 }
 
 #contactsHolder {
@@ -447,6 +460,21 @@ h1, h2, p, li, td, label, select, option, input, button, textarea, span {
     position: absolute;
     left: 40%;
 }
+
+.input-holder {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    width: fit-content;
+    height: 3.6vw;
+}
+
+.placeholder-label {
+    position: relative;
+    top: 1.4vw;
+    left: 1vw;
+}
+
 
 @media screen and (max-width: 1024px) {
     h1, h2, p, li, td, label, select, option, input, button, textarea, span {

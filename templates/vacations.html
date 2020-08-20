@@ -3,7 +3,40 @@
 {% block head %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/vacations.css') }}">
     <script src="{{ url_for('static', filename='js/vacations.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/brief.js') }}"></script>
 {% endblock %}
 
 {% block body %}
+    <article id="content">
+        <article id="superContentHolder">
+            <section id="headerHolder">
+                <h1 id="header" class="header-text orange tenor-sans-font">Стань частью команды</h1>
+                <p id="subHeader">Нам всегда нужны талантливые люди, которые горят своим делом и готовы воплощать самые смелые идеи. Хочешь к нам? Пиши!</p>
+            </section>
+            <img src="{{ url_for('static', filename='img/contact-line.svg') }}" id="vacationOrangeLine" class="orange-line" alt="Orange line"/>
+            <form id="theForm" action="/vacations" method="POST">
+                <section id="nameHolder" class="input-holder">
+                    <label id="nameLabel" class="placeholder-label" for="name">Имя</label>
+                    <input class="text-input" id="name" name="name" type="text" maxlength="75" required>
+                </section>
+                <section id="emailPhoneHolder">
+                    <section id="emailHolder" class="input-holder">
+                        <label id="emailLabel" class="placeholder-label" for="email">Email</label>
+                        <input class="text-input" id="email" name="email" type="email" maxlength="75" required>
+                    </section>
+                    <section id="numberHolder" class="input-holder">
+                        <label id="numberLabel" class="placeholder-label" for="number">Номер телефона</label>
+                        <input class="text-input" id="number" name="number" type="text" maxlength="75" required>
+                    </section>
+                </section>
+                <section id="textHolder">
+                    <textarea id="abilities" name="request" required maxlength="1024" placeholder="Что нам стоит знать?"></textarea>
+                </section>
+                <section id="submitResumeHolder">
+                    <button id="submitResume" class="button resume-button">Оправить</button>
+                </section>
+            </form>
+        </article>
+
+    </article>
 {% endblock %}

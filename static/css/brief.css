@@ -69,11 +69,6 @@ h2, #requestLabel {
     margin-top: 1.5vw;
 }
 
-#nameHolder {
-    display: flex;
-    flex-flow: column nowrap;
-}
-
 .button {
     margin-right: 1.5vw;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
@@ -98,22 +93,13 @@ h2, #requestLabel {
     flex-flow: column;
 }
 
-#request {
-    padding: 1vw 1vw;
-    width: 46%;
-    height: 10vw;
-    background: #F7F7F7;
-    border: none;
-    outline: none;
-}
-
 #blueContactRectangle {
     right: 0;
     width: 26vw;
-    height: 28vw;
+    height: 30vw;
 }
 
-#number {
+#numberHolder {
     margin-left: 2.5vw;
 }
 
@@ -125,13 +111,13 @@ h2, #requestLabel {
 
 
 .checkbox-pair {
-    margin-right: 2vw;
+    margin-right: 1.6vw;
     display: flex;
     align-items: center;
 }
 
 .checkbox-pair > label {
-    margin-left: 0.8vw;
+    margin-left: 2.2vw;
 }
 
 #submitHolder {
@@ -155,4 +141,29 @@ h2, #requestLabel {
 .privacy-policy:hover {
     text-decoration: underline;
     color: #ED5434;
+}
+
+input[type='radio'] {
+    width: 0;
+}
+
+input[type='radio']:after, input[type='radio']:checked:after {
+    width: 1.2vw;
+    height: 1.2vw;
+    border-radius: 100px;
+    top: -0.3vw;
+    position: relative;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    color: white;
+    border: 1px solid;
+}
+
+input[type='radio']:after {
+    border-color: #4B575C;
+}
+input[type='radio']:checked:after {
+    background-color: #F46244;
+    border-color: #F46244;
 }

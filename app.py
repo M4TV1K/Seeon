@@ -13,17 +13,23 @@ def we():
     return render_template('we.html', contact=True)
 
 
-@app.route('/vacations')
+@app.route('/vacations', methods=['GET', 'POST'])
 def vacations():
+    if request.method == 'POST':
+        return redirect('/thank_you')
     return render_template('vacations.html', contact=True)
 
 
 @app.route('/brief', methods=['GET', 'POST'])
 def brief():
     if request.method == 'POST':
-        print('aaaaaaaa')
-        return redirect('/brief')
+        return redirect('/thank_you')
     return render_template('brief.html')
+
+
+@app.route('/thank_you')
+def thank_you():
+    return render_template('thank_you.html')
 
 
 # @app.errorhandler(NotFound)
