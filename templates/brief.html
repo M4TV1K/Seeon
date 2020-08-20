@@ -16,8 +16,10 @@
         <nav id="navPanel">
             <img onclick="openPage()" id="logo" src="{{ url_for('static', filename='img/logo.svg') }}" alt="logo">
             <section id="toMainPage">
-                <p id="toMainPageText">На главную</p>
-                <img src="{{ url_for('static', filename='img/contact-line.svg') }}" id="toMainOrangeLine" class="orange-line" alt="Orange line"/>
+                <p onclick="openPage()" class="small-text tenor-sans-font">На главную</p>
+                <div id="toMainOrangeLineContainer">
+                    <img src="{{ url_for('static', filename='img/contact-line.svg') }}" id="toMainOrangeLine" class="orange-line" alt="Orange line"/>
+                </div>
             </section>
         </nav>
     </article>
@@ -27,8 +29,75 @@
             <img id="chatButton" src="{{ url_for('static', filename='img/chat-button.svg') }}" alt="chat button">
         </div>
     </div>
-    <article id="pageContent">
-
+    <article id="pageContentHolder">
+        <section id="pageContent">
+            <article id="briefHeaderHolder">
+                <img src="{{ url_for('static', filename='img/contact-line.svg') }}" id="briefOrangeLine" class="orange-line" alt="Orange line"/>
+                <h1 class="header-text orange tenor-sans-font">Заполните бриф</h1>
+            </article>
+            <form id="theForm" action="/brief" method="POST">
+                <div id="blueServiceRectangle" class="blue-rectangle"></div>
+                <article id="serviceHolder" class="data-block">
+                    <h2 id="serviceHeader" class="tenor-sans-font">Услуги:</h2>
+                    <h2 id="serviceError" class="tenor-sans-font error">Выберите хоть одну услугу:</h2>
+                    <section class="buttons-holder">
+                        <input id="service" name="service" type="text" maxlength="200" hidden>
+                        <button id="webDev" class="button select-button" type="button" onclick="serviceButton('Веб-разработка', 'webDev')">Веб-разработка</button>
+                        <button id="mobDev" class="button select-button" type="button" onclick="serviceButton('Мобильная разработка', 'mobDev')">Мобильная разработка</button>
+                        <button id="branding" class="button select-button" type="button" onclick="serviceButton('Брендинг', 'branding')">Брендинг</button>
+                        <button id="makeLogo" class="button select-button" type="button" onclick="serviceButton('Логотип', 'makeLogo')">Логотип</button>
+                        <button id="motion" class="button select-button" type="button" onclick="serviceButton('Моушн дизайн', 'motion')">Моушн дизайн</button>
+                        <button id="complex" class="button select-button" type="button" onclick="serviceButton('Комплексное решение', 'complex')">Комплексное решение</button>
+                        <button id="somethingElse" class="button select-button" type="button" onclick="serviceButton('Другое', 'somethingElse')">Другое</button>
+                    </section>
+                </article>
+                <article id="budgetHolder" class="data-block">
+                    <h2 id="budgetHeader" class="tenor-sans-font">Бюджет:</h2>
+                    <h2 id="budgetError" class="tenor-sans-font error">Выберите бюджет:</h2>
+                    <section class="buttons-holder">
+                        <input id="budget" name="budget" type="text" maxlength="50" hidden>
+                        <button id="budget0" class="button select-button budget-button" type="button" onclick="budgetButton('Менее 5 000$', 0)">Менее 5 000$</button>
+                        <button id="budget1" class="button select-button budget-button" type="button" onclick="budgetButton('5 - 15 тыс. $', 1)">5 - 15 тыс. $</button>
+                        <button id="budget2" class="button select-button budget-button" type="button" onclick="budgetButton('15 - 30 тыс. $', 2)">15 - 30 тыс. $</button>
+                        <button id="budget3" class="button select-button budget-button" type="button" onclick="budgetButton('Более 30 тыс $', 3)">Более 30 тыс $</button>
+                    </section>
+                </article>
+                <article id="requestHolder" class="data-block">
+                    <label id="requestLabel" for="request" class="tenor-sans-font">Задача:</label>
+                    <textarea id="request" name="request" required maxlength="1024" placeholder="Например: Сделать интернет-магазин"></textarea>
+                </article>
+                <div id="blueContactRectangle" class="blue-rectangle"></div>
+                <article id="contactHolder" class="data-block">
+                    <h2 class="tenor-sans-font">Контактные данные:</h2>
+                    <section id="nameHolder">
+                        <label id="nameLabel" for="name">Имя</label>
+                        <input class="text-input" id="name" name="name" type="text" maxlength="75" required>
+                    </section>
+                    <section id="emailPhoneHolder">
+                        <input class="text-input" id="email" name="email" type="email" maxlength="75" placeholder="Email" required>
+                        <input class="text-input" id="number" name="number" type="text" maxlength="75" placeholder="Номер телефона" required>
+                    </section>
+                    <section id="contactViaHolder">
+                        <div class="checkbox-pair">
+                            <input id="telegram" type="radio" name="contact-via" value="Telegram" required>
+                            <label for="telegram">Получить ответ в Telegram</label>
+                        </div>
+                        <div class="checkbox-pair">
+                            <input id="viber" type="radio" name="contact-via" value="Viber" required>
+                            <label for="viber">Получить ответ в Viber</label>
+                        </div>
+                        <div class="checkbox-pair">
+                            <input id="whats" type="radio" name="contact-via" value="What's app" required>
+                            <label for="whats">Получить ответ в What's app</label>
+                        </div>
+                    </section>
+                    <section id="submitHolder">
+                        <button id="submitRequest" class="button orange-button">Отправить запрос</button>
+                        <p id="agreement" class="small-text">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с <a class="privacy-policy">политикой конфиденциальности</a>.</p>
+                    </section>
+                </article>
+            </form>
+        </section>
     </article>
 </body>
 </html>

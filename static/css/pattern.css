@@ -28,12 +28,43 @@ h1, h2, p, li, td, label, select, option, input, button, textarea, span {
     margin: 0;
 }
 
-.the-biggest-text, .the-biggest-text > span {
+.text-input {
+    width: 12.5vw;
+    padding: 0.5vw 0.5vw;
+    outline: none;
+    border: none;
+    border-bottom: 0.5px solid #4B575C;
+}
+
+.error {
+    display: none;
+    color: #ED5434;
+}
+
+.text-input:valid {
+    color: #F46244;
+    border-bottom-color: #F46244;
+}
+
+.tenor-sans-font {
     font-family: TenorSans-Regular, sans-serif;
+}
+
+
+.the-biggest-text, .the-biggest-text > span {
     font-weight: 300;
     color: #FFFFFF;
     font-size: 9vw;
     letter-spacing: 0.5vw;
+}
+
+.header-text {
+    font-size: 2.5vw;
+}
+
+.small-text {
+    font-family: "Futura PT book", sans-serif;
+    font-size: 0.9vw;
 }
 
 .orange {
@@ -49,6 +80,11 @@ h1, h2, p, li, td, label, select, option, input, button, textarea, span {
     border-radius: 20px;
     font-size: 0.8vw;
     cursor: pointer;
+}
+
+.blue-rectangle {
+    position: absolute;
+    background: #E3F1F6;
 }
 
 .white-button {
@@ -73,7 +109,7 @@ h1, h2, p, li, td, label, select, option, input, button, textarea, span {
 
 
 #interface {
-    margin-top: 7vh;
+    top: 7vh;
     width: 100%;
     display: flex;
     flex-flow: column nowrap;
@@ -180,7 +216,6 @@ h1, h2, p, li, td, label, select, option, input, button, textarea, span {
 }
 
 .menu-buttons {
-    font-family: "TenorSans-Regular", sans-serif;
     font-weight: 300;
     text-align: center;
     margin-top: 4.5vw;
@@ -247,7 +282,6 @@ h1, h2, p, li, td, label, select, option, input, button, textarea, span {
 }
 
 .language {
-    font-family: "TenorSans-Regular", sans-serif;
     color: white;
     font-size: 0.8vw;
     opacity: 0.5;
@@ -295,7 +329,6 @@ h1, h2, p, li, td, label, select, option, input, button, textarea, span {
 }
 
 #contactHeader {
-    font-family: "TenorSans-Regular", sans-serif;
     margin-right: 12vw;
     font-size: 4vw;
     color: #FFFFFF;
@@ -330,19 +363,19 @@ h1, h2, p, li, td, label, select, option, input, button, textarea, span {
     margin-left: 1vw;
 }
 
-.number > a, #privacyPolicy {
+.number > a, .privacy-policy {
     text-decoration: none;
     cursor: pointer;
 }
 
-.number > a:link, #privacyPolicy:link {
+.number > a:link, .privacy-policy {
     color: #4B575C;
 }
-.number > a:visited, #privacyPolicy:visited {
+.number > a:visited, .privacy-policy {
     color: #4B575C;
 }
 
-.number > a:hover, #privacyPolicy:hover {
+.number > a:hover, .privacy-policy:hover {
     color: #F46244;
     text-decoration: underline;
 }
@@ -362,11 +395,6 @@ h1, h2, p, li, td, label, select, option, input, button, textarea, span {
     flex-flow: column nowrap;
     justify-content: space-between;
     align-items: center;
-}
-
-.small-text {
-    font-family: "Futura PT book", sans-serif;
-    font-size: 0.9vw;
 }
 
 .rotated-text {
@@ -418,15 +446,6 @@ h1, h2, p, li, td, label, select, option, input, button, textarea, span {
     width: 20%;
     position: absolute;
     left: 40%;
-}
-
-#copyrightText {
-    font-family: "Futura PT book", sans-serif;
-    font-size: 0.9vw;
-}
-
-#privacyPolicy {
-
 }
 
 @media screen and (max-width: 1024px) {

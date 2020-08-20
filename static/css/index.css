@@ -35,8 +35,6 @@
 }
 
 #ideasText {
-    font-family: TenorSans-Regular, sans-serif;
-    font-size: 2.5vw;
     width: 33vw;
     margin-left: 19.5vw;
 }
@@ -55,17 +53,20 @@
 }
 
 #cross {
-    cursor: pointer;
+    display: none;
     position: absolute;
     z-index: 1;
     top: 6vh;
     right: 4vw;
-    display: none;
     width: 2vw;
 }
 
 #showreelVideo {
     width: 36vw;
+}
+
+#videoHolder {
+    cursor: pointer;
 }
 
 #theHeader > span {

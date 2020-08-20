@@ -1,0 +1,158 @@
+
+#toMainPage {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+#toMainPage > .small-text {
+    cursor: pointer;
+    margin-right: 1vw;
+}
+
+#toMainPage > .small-text:hover {
+    color: #F46244;
+    text-decoration: underline;
+}
+
+#pageContentHolder {
+    margin-top: 22.5vh;
+    display: flex;
+    justify-content: center;
+}
+
+#pageContent {
+    width: 60%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#briefOrangeLine {
+    margin-top: 1.35vw;
+    left: 5%;
+}
+
+#briefHeaderHolder {
+    flex-flow: row nowrap;
+}
+
+#theForm {
+    margin-top: 4vw;
+}
+
+.data-block {
+    margin-bottom: 5vw;
+}
+
+.data-block:last-child {
+    margin-bottom: 0;
+}
+
+.buttons-holder {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+#blueServiceRectangle {
+    left: 0;
+    width: 8vw;
+    height: 25vw;
+}
+
+h2, #requestLabel {
+    font-size: 1.2vw;
+    margin-bottom: 1vw;
+}
+
+.button, textarea, #nameHolder {
+    margin-top: 1.5vw;
+}
+
+#nameHolder {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.button {
+    margin-right: 1.5vw;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.select-button {
+    background: #FFFFFF;
+}
+
+.select-button:hover {
+    color: #F46244;
+    border: 1px solid #F46244;
+}
+
+.selected-button {
+    color: #FFFFFF;
+    background: #F46244;
+}
+
+#requestHolder {
+    display: flex;
+    flex-flow: column;
+}
+
+#request {
+    padding: 1vw 1vw;
+    width: 46%;
+    height: 10vw;
+    background: #F7F7F7;
+    border: none;
+    outline: none;
+}
+
+#blueContactRectangle {
+    right: 0;
+    width: 26vw;
+    height: 28vw;
+}
+
+#number {
+    margin-left: 2.5vw;
+}
+
+#contactViaHolder, #emailPhoneHolder, #submitHolder {
+    margin-top: 2vw;
+    display: flex;
+}
+
+
+
+.checkbox-pair {
+    margin-right: 2vw;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-pair > label {
+    margin-left: 0.8vw;
+}
+
+#submitHolder {
+    align-items: center;
+}
+
+#submitRequest {
+    margin: 0;
+}
+
+#agreement {
+    font-family: "Futura PT light", sans-serif;
+    width: 30%;
+    margin-left: 5vw;
+}
+
+.privacy-policy {
+    color: #F46244;
+}
+
+.privacy-policy:hover {
+    text-decoration: underline;
+    color: #ED5434;
+}

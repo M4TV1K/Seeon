@@ -1,6 +1,4 @@
-
 from flask import Flask, render_template, request, redirect, session
-from mysql.connector import Error
 
 app = Flask(__name__)
 
@@ -20,9 +18,27 @@ def vacations():
     return render_template('vacations.html', contact=True)
 
 
-@app.route('/brief')
+@app.route('/brief', methods=['GET', 'POST'])
 def brief():
+    if request.method == 'POST':
+        print('aaaaaaaa')
+        return redirect('/brief')
     return render_template('brief.html')
+
+
+# @app.errorhandler(NotFound)
+# def page_not_found(e):
+#     return redirect('/sex')
+#
+#
+# @app.errorhandler(binascii.Error)
+# def page_not_found(e):
+#     return redirect('/sex')
+#
+#
+# @app.errorhandler(UnicodeDecodeError)
+# def page_not_found(e):
+#     return redirect('/sex')
 
 
 if __name__ == '__main__':
