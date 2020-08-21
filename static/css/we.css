@@ -1,0 +1,132 @@
+
+#content {
+    margin-top: 25vh;
+}
+
+#superContentHolder {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#topHolder {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#usTextHolder {
+    width: 50%;
+    position: static;
+    margin-left: 5vw;
+    padding-top: 5vw;
+    padding-bottom: 9vw;
+}
+
+#usText1, #usText2 {
+    margin-left: 3.5vw;
+}
+
+#usText1 {
+    width: 22vw;
+}
+
+#usText2 {
+    width: 24vw;
+}
+
+.text-2 {
+    margin-top: 1.5vw;
+}
+
+#weCreateHolder, #seeonHolder {
+    margin-top: 6vw;
+}
+
+#weCreateHolder > .the-biggest-text {
+    color: #E3E3E3;
+    font-size: 8vw; /*TODO REMOVE WHEN ANIMATION ARRIVES*/
+    text-align: center; /*SAME*/
+}
+
+#seeonHolder {
+    position: static;
+    display: flex;
+    align-items: center;
+}
+
+#seeonHolder, #thingsRectangle {
+    height: 20vw;
+}
+
+#seeonHolder > .the-biggest-text {
+    margin-left: 2.5vw;
+}
+
+#designTextHolder {
+    position: absolute;
+    left: 50vw;
+}
+
+#usText3 {
+    width: 22vw;
+}
+
+#usText4 {
+    width: 21vw;
+}
+
+#foundersHolder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#foundersHolder, #thingsMatters {
+    margin-top: 7.5vw;
+}
+
+#founders {
+    position: absolute;
+    left: 1vw;
+    margin-bottom: 9.5vw;
+}
+
+.founder-holder {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.founder-holder:last-child {
+    margin-left: 10vw;
+}
+
+.founder-photo {
+    width: 20vw;
+    box-shadow: 0 25px 50px rgba(75, 87, 92, 0.15);
+}
+
+.founder-name {
+    margin-top: 2vw;
+    font-size: 1.7vw;
+}
+
+.position {
+    margin-top: 1.1vw;
+}
+
+#thingsMatters {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#thingsMatters > .header-text {
+    width: 25vw;
+    margin-right: 15vw;
+}
+
+#thingsRectangle {
+    position: static;
+    width: 42vw;
+}

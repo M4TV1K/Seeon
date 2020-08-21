@@ -1,52 +1,57 @@
 from flask import Flask, render_template, request, redirect, session
 
-app = Flask(__name__)
+application = Flask(__name__)
 
 
-@app.route('/')
+@application.route('/')
 def index():
     return render_template('index.html', contact=True)
 
 
-@app.route('/we')
+@application.route('/we')
 def we():
     return render_template('we.html', contact=True)
 
 
-@app.route('/vacations', methods=['GET', 'POST'])
+@application.route('/vacations', methods=['GET', 'POST'])
 def vacations():
     if request.method == 'POST':
         return redirect('/thank_you')
     return render_template('vacations.html', contact=True)
 
 
-@app.route('/brief', methods=['GET', 'POST'])
+@application.route('/contacts')
+def contacts():
+    return render_template('index.html', contact=True, to_contact=True)
+
+
+@application.route('/brief', methods=['GET', 'POST'])
 def brief():
     if request.method == 'POST':
         return redirect('/thank_you')
     return render_template('brief.html')
 
 
-@app.route('/thank_you')
+@application.route('/thank_you')
 def thank_you():
     return render_template('thank_you.html')
 
 
-# @app.errorhandler(NotFound)
+# @application.errorhandler(NotFound)
 # def page_not_found(e):
 #     return redirect('/sex')
 #
 #
-# @app.errorhandler(binascii.Error)
+# @application.errorhandler(binascii.Error)
 # def page_not_found(e):
 #     return redirect('/sex')
 #
 #
-# @app.errorhandler(UnicodeDecodeError)
+# @application.errorhandler(UnicodeDecodeError)
 # def page_not_found(e):
 #     return redirect('/sex')
 
 
 if __name__ == '__main__':
-    app.debug = True
-    app.run(host='192.168.0.59', port=5000)
+    application.debug = True
+    application.run(host='192.168.0.59', port=5000)

@@ -3,6 +3,17 @@
 {% block head %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
     <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+    {% if to_contact %}
+        <script>
+            $(document).ready(() => {
+                setTimeout(() => {
+                    $([document.documentElement, document.body]).animate({
+                        scrollTop: $(document).height()
+                    }, 0);
+                }, 50);
+            })
+        </script>
+    {% endif %}
 {% endblock %}
 
 {% block body %}

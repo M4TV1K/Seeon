@@ -6,4 +6,52 @@
 {% endblock %}
 
 {% block body %}
+    <article id="content">
+        <article id="superContentHolder">
+            <section id="topHolder">
+                <h1 class="the-biggest-text tenor-sans-font blue">МЫ</h1>
+                <article id="usTextHolder" class="blue-rectangle">
+                    <p id="usText1">
+                        Seeon, являемся digital компанией полного цикла относящиеся со страстью к своему делу.
+                    </p>
+                    <p id="usText2" class="text-2">
+                        Разрабатываем веб проекты, мобильные приложения и упаковываем бизнес. Создаём бренды и инновационные продукты.
+                    </p>
+                </article>
+            </section>
+            <section id="weCreateHolder">
+                <h1 class="the-biggest-text tenor-sans-font blue">СОЗДАЁМ БУДУЩЕЕ</h1>
+            </section>
+            <section id="seeonHolder" class="blue-rectangle">
+                <h1 class="the-biggest-text tenor-sans-font">SEEON</h1>
+                <article id="designTextHolder">
+                    <p id="usText3">
+                        С помощью дизайна, брендинга и коммуникаций мы трансформируем, улучшаем бизнес и жизнь людей.
+                    </p>
+                    <p id="usText4" class="text-2">
+                        Производим эмоции и помогаем нашим клиентам быть на шаг впереди.
+                    </p>
+                </article>
+            </section>
+            <section id="foundersHolder">
+                <p id="founders" class="rotated-text orange tenor-sans-font">Основатели seeon</p>
+                <article class="founder-holder">
+                    <img class="founder-photo" src="{{ url_for('static', filename='img/Igor.png') }}" alt="Image of Igor, head of business">
+                    <h1 class="founder-name tenor-sans-font">Игорь Болобков</h1>
+                    <h2 class="position small-text">Co-founder, head of business</h2>
+                </article>
+                <article class="founder-holder">
+                    <img class="founder-photo" src="{{ url_for('static', filename='img/Alex.png') }}" alt="Image of Alex, head of business">
+                    <h1 class="founder-name tenor-sans-font">Алексей Царевский</h1>
+                    <h2 class="position small-text">Co-founder, art director</h2>
+                </article>
+            </section>
+            <section id="thingsMatters">
+                <h1 class="header-text orange tenor-sans-font">То что мы создаем имеет значение!</h1>
+                <article id="thingsRectangle" class="blue-rectangle">
+
+                </article>
+            </section>
+        </article>
+    </article>
 {% endblock %}
