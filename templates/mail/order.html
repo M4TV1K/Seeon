@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h1 {
+            font-size: 30px;
+        }
+        h1, h2, h3, span {
+            color: #4B575C;
+        }
+        section {
+            margin-top: 50px;
+        }
+        .orange {
+            color: #F46244;
+        }
+        .blue {
+            color: #78bbd3;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <h1 class="orange">Запрос</h1>
+        <h2><span class="orange">{{ name }}</span></h2>
+        <h3>{{ number }} <span class="blue">(Получить ответ в {{ contact_via }})</span></h3>
+        <h3>{{ email }}</h3>
+        <section>
+            <h2>Услуга:</h2>
+            <h3>{{ service }}</h3>
+        </section>
+        <section>
+            <h2>Бюджет:</h2>
+            <h3>{{ budget }}</h3>
+        </section>
+        <section>
+            <h2>Задача:</h2>
+            <h3>{{ target }}</h3>
+        </section>
+    </article>
+</body>
+</html>

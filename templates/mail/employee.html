@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h1 {
+            font-size: 30px;
+        }
+        h1, h2, h3 {
+            color: #4B575C;
+        }
+        section {
+            margin-top: 50px;
+        }
+        .orange {
+            color: #F46244;
+        }
+        .blue {
+            color: #78bbd3;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <h1 class="orange">Вакансия</h1>
+        <h2><span class="orange">{{ name }}</span></h2>
+        <h3>{{ number }}</h3>
+        <h3>{{ email }}</h3>
+        <section>
+            <h2>Цель:</h2>
+            <h3 class="blue">{{ target }}</h3>
+        </section>
+    </article>
+</body>
+</html>

@@ -109,7 +109,7 @@ $(document).ready(() => {
                             }
                         });
                     $('#menuLine2')
-                        .css('margin-top', '-1px')
+                        .css('margin-top', window.innerWidth > 1024 ? '-1px' : '-2px')
                         .animate(
                         { deg: -45 },
                         {
@@ -155,7 +155,7 @@ $(document).ready(() => {
                             step: function(now) {
                                 $(this).css({ transform: 'rotate(' + now + 'deg)' });
                             }
-                        }).css('margin-top', '8px');
+                        }).css('margin-top', window.innerWidth > 1024 ? '8px' : '6px');
                 }
             });
         }

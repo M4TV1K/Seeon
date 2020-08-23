@@ -24,7 +24,8 @@
         <section id="mainHolder">
             <section id="ideasTextHolder">
                 <img src="{{ url_for('static', filename='img/contact-line.svg') }}" id="ideaOrangeLine" class="orange-line" alt="Orange line"/>
-                <h1 id="ideasText" class="header-text tenor-sans-font">Мы воплощаем в жизнь самые амбициозные идеи!</h1>
+                <h1 id="ideasText" class="header-text tenor-sans-font">Мы воплощаем <span class="desktop tenor-sans-font">в жизнь</span> самые амбициозные идеи!</h1>
+                <button id="mobileStartProject" class="mobile button orange-button" onclick="openPage('brief')">Начать проект</button>
             </section>
             <section id="showreelHolder">
                 <p id="showreelText" class="small-text rotated-text orange">Showreel</p>
@@ -45,10 +46,10 @@
 
         <article id="scrollDownHolder">
             <p class="small-text orange">Листайте вниз</p>
-            <div id="horizontalLine"></div>
+            <div class="horizontal-line"></div>
         </article>
 
-        <section id="mainSocialMenu" class="social-media">
+        <section id="mainSocialMenu" class="social-media desktop">
             <div class="what-buttonHolder round-button-holder sm-holder-menu" onclick="openInNewTab('')">
                 <img class="what-button sm-button" src="{{ url_for('static', filename='img/what.svg') }}" alt="What's up button">
             </div>

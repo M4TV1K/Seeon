@@ -71,7 +71,7 @@ textarea {
     letter-spacing: 0.5vw;
 }
 
-.header-text {
+.header-text, .header-text > span {
     font-size: 2.5vw;
 }
 
@@ -85,7 +85,7 @@ textarea {
 }
 
 .blue {
-    color: #E3F1F6;;
+    color: #E3F1F6;
 }
 
 .button {
@@ -122,6 +122,17 @@ textarea {
 
 .orange-button:hover {
     background: #ED5434;
+}
+
+.resume-button {
+    background-color: #FFFFFF;
+    border: 1px solid #F46244;
+    color: #F46244;
+}
+
+.resume-button:hover {
+    color: white;
+    background-color: #F46244;
 }
 
 
@@ -479,16 +490,302 @@ textarea {
     left: 1vw;
 }
 
+.mobile {
+    display: none;
+}
+
+.horizontal-line {
+    background-color: #F46244;
+    margin-top: 1vw;
+    width: 0.5px;
+    height: 10vw;
+}
 
 @media screen and (max-width: 1024px) {
     h1, h2, p, li, td, label, select, option, input, button, textarea, span {
         font-size: 1.6vw;
+    }
+    textarea {
+        padding: 1.5vw 1.5vw;
+        width: 60%;
+        height: 15vw;
+    }
+    .placeholder-label {
+        top: 3vw;
+        left: 2vw;
+    }
+    .text-input {
+        width: 18vw;
+        padding: 1vw 1vw;
+    }
+    #navPanel {
+        width: 89%;
+    }
+    #footer {
+        padding-top: 20vw;
+    }
+    .mobile {
+        display: block;
+    }
+    .desktop {
+        display: none;
+    }
+    .the-biggest-text, .the-biggest-text > span  {
+        font-size: 12vw;
+    }
+    .header-text {
+        font-size: 4vw;
+    }
+    .language, .button {
+        font-size: 1.5vw;
+    }
+    .small-text {
+        font-size: 1.6vw;
+    }
+    .language-slash {
+        margin: 0 2.5vw;
+        width: 2.5vw;
+    }
+    .button {
+        padding: 0 3.75vw;
+        height: 4.5vw;
+    }
+    #interface {
+        top: 6vw;
+    }
+    #logo {
+        width: 4vw;
+    }
+    .round-button-holder {
+        width: 5vw;
+        height: 5vw;
+    }
+    .menu-button-line {
+        height: 2px;
+        width: 2vw;
+    }
+    #menuLine2 {
+        margin-top: 6px;
+    }
+    #startProject {
+        display: none;
+    }
+    #menuButton {
+        position: static;
+    }
+    #chatButton {
+        width: 2.5vw;
+    }
+
+    #menu {
+        margin-top: 20vh;
+    }
+    #menuNav {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+    .menu-buttons, #menuStartProject {
+        margin-top: 12vw;
+    }
+    .menu-buttons {
+        font-size: 2.5vw;
+    }
+    #menuStartProject {
+        background-color: #F46244;
+        color: #FFFFFF;
+        border: 1px solid #FFFFFF;
+    }
+    #menuStartProject:hover {
+        background-color: white;
+        color: #F46244;
+        border-color: #FFFFFF;
+    }
+
+    #languageSMHolder {
+        margin-top: 24vw;
+        flex-flow: column nowrap;
+    }
+    #socialMediaMenu, .social-media {
+        width: 34vw;
+        height: fit-content;
+    }
+    #menuLanguage, .sm-holder-menu {
+        position: static;
+    }
+    #menuLanguage {
+        margin-top: 6vw;
+    }
+    .sm-button {
+        width: 1.5vw;
+        height: 1.5vw;
+    }
+
+    #contactsHolder {
+        flex-flow: column nowrap;
+        align-items: flex-start;
+    }
+    #contactHeaderHolder {
+        width: 92%;
+        height: 22vw;
+        justify-content: center;
+    }
+    #contactHeader {
+        margin-right: 0;
+        font-size: 11vw;
+    }
+    #contactOrangeLine {
+        display: none;
+    }
+    #contacts, #contactHorizontalLine {
+        margin-left: 18vw;
+    }
+    #contactHorizontalLine {
+        position: relative;
+        top: -4vw;
+    }
+    .number-holder {
+        margin-top: 3.5vw;
+    }
+    #copyrightHolder {
+        margin-top: 8vw;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+    .social-media {
+        margin-left: 0;
+        position: static;
+        flex-flow: row;
+    }
+    .telegram-buttonHolder, .fb-buttonHolder, .insta-buttonHolder  {
+        margin-top: 0;
+    }
+    #languageCopyrightHolder {
+        margin-top: 3.5vw;
+        margin-left: 0;
+        margin-bottom: 0;
+        flex-flow: column nowrap;
+    }
+    #copyrightTextHolder {
+        margin-top: 3.5vw;
+        position: static;
+        width: fit-content;
     }
 }
 
 @media screen and (max-width: 550px) {
     h1, h2, p, li, td, label, select, option, input, button, textarea, span {
         font-size: 3.75vw;
+    }
+    .input-holder {
+        height: 14vw;
+        width: 100%;
+        margin-top: 8vw;
+    }
+    .text-input {
+        width: 92%;
+        padding: 2vw 4vw;
+    }
+    .placeholder-label {
+        top: 6vw;
+        left: 6vw;
+    }
+    .the-biggest-text, .the-biggest-text > span {
+        font-size: 15vw;
+        letter-spacing: 0.8vw;
+    }
+    .header-text {
+        font-size: 7vw;
+    }
+    #interface {
+        top: 8vw;
+    }
+    #navPanel {
+        width: 80%;
+    }
+    #logo {
+        width: 9vw;
+    }
+    .round-button-holder {
+        width: 12vw;
+        height: 12vw;
+    }
+    .menu-button-line {
+        width: 5vw;
+    }
+
+    #footer {
+        padding-top: 30vw;
+    }
+    #contactHeaderHolder {
+        width: 85%;
+        height: 22vw;
+    }
+    #contactHeader {
+        font-size: 13vw;
+    }
+    #contacts {
+        margin-top: 1vw;
+    }
+    #contacts, #contactHorizontalLine {
+        margin-left: 10vw;
+    }
+    .number-holder {
+        margin-top: 8vw;
+    }
+
+    #socialMediaMenu, .social-media {
+        width: 64vw;
+    }
+    .sm-button {
+        width: 4vw;
+        height: 4vw;
+    }
+
+    #copyrightHolder {
+        margin-top: 12vw;
+        margin-bottom: 5.5vw;
+    }
+    #contactHorizontalLine {
+        top: -10vw;
+    }
+    #languageCopyrightHolder {
+        margin-top: 8vw;
+    }
+
+    .language, .button, .small-text {
+        font-size: 3.5vw;
+    }
+    #copyrightTextHolder {
+        margin-top: 5vw;
+    }
+
+    .menu-buttons {
+        font-size: 5vw;
+    }
+    .menu-buttons, #menuStartProject {
+        margin-top: 14vw;
+    }
+    .button {
+        padding: 0 10vw;
+        height: 10vw;
+    }
+    #languageSMHolder {
+        margin-top: 20.5vw;
+    }
+    .language-slash {
+        margin: 0 6vw;
+        width: 7vw;
+    }
+    #menuLanguage {
+        margin-top: 8.5vw;
+    }
+    .horizontal-line {
+        margin-top: 6vw;
+        height: 18vw;
+    }
+    #menu {
+        margin-top: 33vw;
     }
 }
 

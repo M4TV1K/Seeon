@@ -5,7 +5,8 @@ function exitFullscreen() {
         .prop('muted', true)
         .css({
             width: '36vw',
-            cursor: 'pointer'
+            cursor: 'pointer',
+            display: window.innerWidth > 1024 ? 'block' : 'none'
         }, 500);
 }
 
@@ -29,8 +30,10 @@ function openVideo() {
             .css({
                 width: '100%',
                 height: '100%',
-                cursor: "url('static/img/cross.svg'), auto"
-            });
+                cursor: "url('static/img/cross.svg'), auto",
+                display: "block"
+            })
+            .get(0).play();
     }
     else {
         if (document.exitFullscreen) {

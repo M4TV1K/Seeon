@@ -103,9 +103,112 @@
     text-align: center;
 }
 
-#horizontalLine {
-    background-color: #F46244;
-    margin-top: 1vw;
-    width: 0.5px;
-    height: 10vw;
+@media screen and (max-width: 1024px) {
+    #topHolder {
+        height: 100vh;
+        background: linear-gradient(to right, #E3F1F6 92%, #FFFFFF 8%);
+    }
+
+    #headerHolder {
+        margin-top: 26.5vw;
+        justify-content: flex-start;
+    }
+
+    #theHeader {
+        position: static;
+    }
+
+    #theHeader > span {
+        color: #FFFFFF;
+    }
+
+    #mainHolder {
+        margin-top: 13vw;
+        height: fit-content;
+    }
+
+    #ideasTextHolder {
+        flex-flow: column nowrap;
+        align-items: flex-start;
+    }
+    #ideasText, #mobileStartProject {
+        margin-left: 12vw;
+    }
+    #ideasText {
+        width: 55vw;
+    }
+    #mobileStartProject {
+        margin-top: 5.5vw;
+    }
+    #ideaOrangeLine {
+        width: 6vw;
+        top: 4.75vw;
+        position: relative;
+    }
+    #showreelVideo {
+        display: none;
+    }
+    #showreelHolder {
+        position: relative;
+        top: -30vw;
+        right: 4vw;
+    }
+    #playButtonHolder {
+        position: static;
+        width: 8vw;
+        height: 8vw;
+    }
+
+    #scrollDownHolder {
+        margin-top: 53vw;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #topHolder {
+        background: linear-gradient(to right, #E3F1F6 84%, #FFFFFF 16%);
+    }
+    #ideasText {
+        width: 80vw;
+    }
+    #ideasText, #mobileStartProject {
+        margin-left: 12.5vw;
+    }
+    #showreelHolder {
+        position: absolute;
+        top: -34vw;
+        right: 6vw;
+    }
+    #mobileStartProject {
+        margin-top: 8vw;
+    }
+    #playButtonHolder {
+        width: 20vw;
+        height: 20vw;
+    }
+    #showreelText {
+        margin-right: -2.5vw;
+    }
+    #headerHolder {
+        margin-top: 38vw;
+    }
+    #mainHolder {
+        margin-top: 15vw;
+    }
+    #ideaOrangeLine {
+        width: 6.5vw;
+        top: 8.5vw;
+    }
+    #scrollDownHolder {
+        margin-top: 55vw;
+    }
+}
+
+@media screen and (min-height: 800px) and (max-height: 823px) {
+    #headerHolder {
+        margin-top: 50vw;
+    }
+    #scrollDownHolder {
+        margin-top: 80vw;
+    }
 }

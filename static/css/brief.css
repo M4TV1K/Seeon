@@ -167,3 +167,135 @@ input[type='radio']:checked:after {
     background-color: #F46244;
     border-color: #F46244;
 }
+
+
+@media screen and (max-width: 1024px) {
+    #pageContentHolder {
+        justify-content: flex-start;
+    }
+    #pageContent {
+        margin-left: 15vw;
+        width: 66%;
+    }
+    #briefOrangeLine {
+        display: none;
+    }
+    h2, #requestLabel {
+        font-size: 2vw;
+        margin-bottom: 2vw;
+    }
+    #theForm {
+        margin-top: 7vw;
+    }
+    .button {
+        margin-right: 4vw;
+    }
+    .button, textarea, #nameHolder {
+        margin-top: 2.5vw;
+    }
+    #toMainPage > .small-text {
+        margin-right: 2vw;
+    }
+    #pageContentHolder {
+        margin-top: 19vw;
+    }
+    .data-block {
+        margin-bottom: 7vw;
+    }
+    #blueContactRectangle {
+        width: 22.5vw;
+        height: 36vw;
+    }
+    #blueServiceRectangle {
+        height: 26vw;
+    }
+    .checkbox-pair > label {
+        margin-left: 3vw;
+    }
+    #contactViaHolder, #emailPhoneHolder, #submitHolder {
+        margin-top: 3vw;
+    }
+    #agreement {
+        width: 50%;
+        margin-left: 4vw;
+    }
+    #numberHolder {
+        margin-left: 3vw;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #blueContactRectangle, #blueServiceRectangle {
+        display: none;
+    }
+    #pageContentHolder {
+        justify-content: center;
+    }
+    #pageContent {
+        margin-left: 0;
+        width: 80%;
+    }
+    #pageContentHolder {
+        margin-top: 35vw;
+    }
+    h2, #requestLabel {
+        font-size: 4.2vw;
+        margin-bottom: 3vw;
+    }
+    .button, textarea, #nameHolder {
+        margin-top: 8vw;
+    }
+    .button {
+        margin-right: 9vw;
+    }
+    #theForm {
+        margin-top: 12vw;
+    }
+    .data-block {
+        margin-bottom: 16vw;
+    }
+    textarea {
+        padding: 2vw 2vw;
+        width: 95%;
+        height: 25vw;
+    }
+    #nameHolder {
+        margin-top: 0;
+    }
+    #nameHolder, #emailPhoneHolder {
+        width: 100%;
+    }
+    #emailPhoneHolder {
+        margin: 0;
+        flex-flow: column nowrap;
+    }
+    #numberHolder {
+        margin-left: 0;
+    }
+    #contactViaHolder, #submitHolder {
+        margin-top: 10vw;
+        flex-flow: column;
+    }
+    .checkbox-pair {
+        margin-top: 5vw;
+        margin-right: 0;
+    }
+    .checkbox-pair:first-child {
+        margin-top: 0;
+    }
+    .checkbox-pair > label {
+        margin-left: 8vw;
+    }
+    input[type='radio']:after, input[type='radio']:checked:after {
+        width: 4vw;
+        height: 4vw;
+    }
+    #agreement {
+        margin-top: 6vw;
+        width: 100%;
+        margin-left: 0;
+    }
+    #submitHolder {
+        margin-bottom: 20vw;
+    }
+}

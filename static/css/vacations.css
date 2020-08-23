@@ -36,17 +36,6 @@
     height: 2vw;
 }
 
-.resume-button {
-    background-color: #FFFFFF;
-    border: 1px solid #F46244;
-    color: #F46244;
-}
-
-.resume-button:hover {
-    color: white;
-    background-color: #F46244;
-}
-
 #nameHolder {
     width: 100%;
 }
@@ -73,4 +62,76 @@
 
 #footer {
     padding-top: 10vh;
+}
+
+@media screen and (max-width: 1024px) {
+    #content {
+        margin-top: 25vw;
+    }
+    #vacationOrangeLine {
+        display: none;
+    }
+    #superContentHolder {
+        justify-content: flex-start;
+        flex-flow: column nowrap;
+    }
+    #subHeader {
+        width: 31vw;
+    }
+    .input-holder {
+        height: 8vw;
+        width: 100%;
+    }
+    #name {
+        width: 100%;
+    }
+    .text-input {
+        width: 100%;
+    }
+    #header {
+        margin-bottom: 3.5vw;
+    }
+    #emailPhoneHolder {
+        width: 100%;
+        margin-top: 0;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    #numberHolder {
+        margin-left: 0;
+    }
+    #textHolder, #submitResumeHolder {
+        margin-top: 5vw;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #superContentHolder {
+        width: 82%;
+    }
+    #subHeader {
+        width: 90%;
+    }
+    #theForm {
+        margin-right: 0;
+    }
+    #name {
+        width: 88%;
+    }
+    .text-input {
+        width: 88%;
+    }
+    #abilities {
+        width: 94.5%;
+        height: 25vw;
+    }
+    .input-holder {
+        height: 10vw;
+    }
+    #header {
+        margin-bottom: 7vw;
+    }
+    #textHolder, #submitResumeHolder {
+        margin-top: 10vw;
+    }
 }

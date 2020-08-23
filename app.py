@@ -1,6 +1,16 @@
-from flask import Flask, render_template, request, redirect, session
+from flask import Flask, render_template, request, redirect
+from flask_mail import Mail, Message
 
 application = Flask(__name__)
+
+application.config['MAIL_SERVER'] = 'smtp.mail.ru'
+application.config['MAIL_PORT'] = 465
+# application.config['MAIL_USE_SSL'] = False
+application.config['USER_ENABLE_AUTH0'] = True
+application.config['MAIL_USERNAME'] = 'info@seeonstudio.com'
+application.config['MAIL_PASSWORD'] = 'SeeonMoney2020'
+application.config['MAIL_DEFAULT_SENDER'] = 'info@seeonstudio.com'
+mail = Mail(application)
 
 
 @application.route('/')
@@ -16,6 +26,16 @@ def we():
 @application.route('/vacations', methods=['GET', 'POST'])
 def vacations():
     if request.method == 'POST':
+        msg = Message('New Employee', recipients=[application.config['MAIL_DEFAULT_SENDER']])
+        msg.html = render_template(
+            'mail/employee.html',
+            sending_mail=True,
+            name=request.form['name'],
+            number=request.form['number'],
+            email=request.form['email'],
+            target=request.form['request']
+        )
+        mail.send(msg)
         return redirect('/thank_you')
     return render_template('vacations.html', contact=True)
 
@@ -28,6 +48,19 @@ def contacts():
 @application.route('/brief', methods=['GET', 'POST'])
 def brief():
     if request.method == 'POST':
+        msg = Message('New Order', recipients=[application.config['MAIL_DEFAULT_SENDER']])
+        msg.html = render_template(
+            'mail/order.html',
+            sending_mail=True,
+            name=request.form['name'],
+            number=request.form['number'],
+            contact_via=request.form['contact-via'],
+            email=request.form['email'],
+            service=request.form['service'],
+            budget=request.form['budget'],
+            target=request.form['request']
+        )
+        mail.send(msg)
         return redirect('/thank_you')
     return render_template('brief.html')
 

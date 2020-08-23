@@ -45,7 +45,7 @@
 #weCreateHolder > .the-biggest-text {
     color: #E3E3E3;
     font-size: 8vw; /*TODO REMOVE WHEN ANIMATION ARRIVES*/
-    text-align: center; /*SAME*/
+    text-align: center; /*SAME REMOVE*/
 }
 
 #seeonHolder {
@@ -129,4 +129,160 @@
 #thingsRectangle {
     position: static;
     width: 42vw;
+}
+
+#partnersHolder {
+    display: flex;
+}
+
+@media screen and (max-width: 1024px) {
+    #content {
+        margin-top: 25vw;
+    }
+    #topHolder {
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    #topHolder > .the-biggest-text {
+        margin-left: 6vw;
+    }
+    #usTextHolder {
+        margin-top: 5vw;
+        display: flex;
+        flex-flow: column nowrap;
+        width: 100%;
+        margin-left: 0;
+        align-items: center;
+    }
+    #usText1, #usText2 {
+        width: 30vw;
+        margin-left: 0;
+    }
+    .text-2 {
+        margin-top: 3vw;
+    }
+    #weCreateHolder, #seeonHolder {
+        margin-top: 10vw;
+    }
+    #seeonHolder {
+        display: flex;
+        justify-content: center;
+    }
+    #seeonHolder > .the-biggest-text {
+        margin-top: 45vw;
+        margin-left: 0;
+        position: absolute;
+        text-align: center;
+    }
+    #designTextHolder {
+         position: static;
+    }
+    #usText3, #usText4 {
+        width: 31vw;
+    }
+    #usTextHolder, #seeonHolder {
+        padding-top: 12vw;
+        padding-bottom: 12vw;
+    }
+    #foundersHolder, #thingsMatters {
+        margin-top: 10vw;
+    }
+    #foundersHolder {
+        flex-flow: column nowrap;
+    }
+    #founders {
+        font-size: 2.5vw;
+        position: static;
+    }
+    .rotated-text {
+        transform: rotate(0);
+    }
+    .founder-photo {
+        width: 30vw;
+    }
+    .founder-name {
+        margin-top: 3vw;
+        font-size: 2.5vw;
+    }
+    .position {
+        margin-top: 1.6vw;
+    }
+    #thingsMatters {
+        justify-content: space-between;
+    }
+    #thingsRectangle {
+        position: static;
+        width: 50vw;
+    }
+    #thingsMatters > .header-text {
+        width: 43vw;
+        margin-right: 0;
+        margin-left: 6vw;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #topHolder > .the-biggest-text {
+        margin-left: 9%;
+    }
+    #content {
+        margin-top: 35vw;
+    }
+    #usText1, #usText2 {
+        width: 71vw;
+        margin-left: 0;
+    }
+    #usTextHolder, #seeonHolder {
+        padding-top: 15vw;
+        padding-bottom: 15vw;
+    }
+    #usTextHolder {
+        margin-top: 8vw;
+    }
+    #weCreateHolder, #seeonHolder, #foundersHolder, #thingsMatters {
+        margin-top: 20vw;
+    }
+    #weCreateHolder > .the-biggest-text {
+        font-size: 12vw;
+    }
+    #usText3, #usText4 {
+        width: 61vw;
+    }
+    #seeonHolder > .the-biggest-text {
+        margin-top: 51vw;
+    }
+    #founders {
+        font-size: 4.25vw;
+        margin-right: 41vw;
+    }
+    #partnersHolder {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+    .founder-holder {
+        align-items: flex-start;
+    }
+    .founder-holder:last-child {
+        margin-top: 15vw;
+        margin-left: 0;
+    }
+    .founder-photo {
+        width: 80vw;
+    }
+    .founder-name {
+        margin-top: 6vw;
+        font-size: 6.5vw;
+    }
+    .position {
+        margin-top: 3vw;
+    }
+    #thingsRectangle {
+        display: none;
+    }
+    #thingsMatters > .header-text {
+        width: 77vw;
+        margin-left: 10vw;
+    }
 }

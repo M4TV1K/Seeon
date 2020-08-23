@@ -35,23 +35,43 @@ function showError(element) {
     }, 2500);
 }
 
+function focusIn(input) {
+    if (!$('#' + input + 'Label').text().includes(':')) {
+        $('#' + input + 'Label').animate({
+            top: window.innerWidth > 1024 ? "-=1.2vw" : window.innerWidth > 550 ? "-=2.5vw" : "-=5vw",
+            left: window.innerWidth > 1024 ? "-=0.5vw" : window.innerWidth > 550 ? "-=1vw" : "-=2vw",
+            fontSize: "-=0.2vw"
+        }, 200).text($('#' + input + 'Label').text() + ':');
+    }
+}
+
 function focusInput(input) {
     $('#' + input)
         .click(() => {
-            if (!$('#' + input + 'Label').text().includes(':')) {
-                $('#' + input + 'Label').animate({
-                    top: "-=1.2vw",
-                    left: "-=0.5vw",
-                    fontSize: "-=0.2vw"
-                }, 200).text($('#' + input + 'Label').text() + ':');
+            focusIn(input)
+        })
+        .on('keypress', (e) => {
+            if (e.which === 13) {
+                if (input === 'name') {
+                    e.preventDefault()
+                    $('#email').focus();
+                }
+                else if (input === 'email') {
+                    e.preventDefault()
+                    $('#number').focus();
+                }
             }
-        }).focusout(() => {
+        })
+        .focusin(() => {
+            focusIn(input)
+        })
+        .focusout(() => {
             if ($('#' + input).val() === "") {
                 let text = $('#' + input + 'Label').text();
                 text = text.substring(0, text.length - 1);
                 $('#' + input + 'Label').animate({
-                    top: "+=1.2vw",
-                    left: "+=0.5vw",
+                    top: window.innerWidth > 1024 ? "+=1.2vw" : window.innerWidth > 550 ? "+=2.5vw" : "+=5vw",
+                    left: window.innerWidth > 1024 ? "+=0.5vw" : window.innerWidth > 550 ? "+=1vw" : "+=2vw",
                     fontSize: "+=0.2vw"
                 }, 200).text(text);
             }

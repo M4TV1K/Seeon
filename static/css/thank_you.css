@@ -40,3 +40,48 @@
     width: 27.5vw;
     height: 22.5vw;
 }
+
+@media screen and (max-width: 1024px) {
+    #superContentHolder {
+        width: 72%;
+    }
+    #thanksHeader {
+        font-size: 3vw;
+    }
+    #thanksOrangeLine {
+        margin-top: 2vw;
+        left: 0;
+    }
+    #rightBlueRectangle {
+        width: 30vw;
+        height: 35vw;
+    }
+    #leftBlueRectangle {
+        width: 10vw;
+        height: 40vw;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #pageContent {
+        margin-top: 30vh;
+    }
+    #rightBlueRectangle, #thanksOrangeLine {
+        display: none;
+    }
+    #thanksHeader {
+        font-size: 6vw;
+        width: 78%;
+    }
+    #superContentHolder {
+        width: 80%;
+    }
+    #returnButton {
+        margin-top: 12vw;
+        width: 50vw;
+    }
+    #leftBlueRectangle {
+        width: 33vw;
+        height: 50vw;
+    }
+}
