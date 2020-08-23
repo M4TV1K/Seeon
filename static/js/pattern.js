@@ -87,7 +87,11 @@ $(document).ready(() => {
             $('#pageContent, #footer').css('display', 'none');
             $('#interface').css('display', 'none');
             $('#chatHolder').css('display', 'none');
-            $('#menuHolder').css('display', 'flex');
+            $('#menuHolder').css({
+                display: '-webkit-box',
+                display: '-ms-flexbox',
+                display: 'flex'
+            });
             $('#menuSpreader').animate({
                 width: '100vw'
             }, {
@@ -97,15 +101,27 @@ $(document).ready(() => {
                         .unbind('mouseenter mouseleave')
                     $('#startProject').removeClass('orange-button').addClass('white-button');
 
-                    $('#interface').fadeIn().css('display', 'flex');
-                    $('#menu').fadeIn().css('display', 'flex');
+                    $('#interface').fadeIn().css({
+                        display: '-webkit-box',
+                        display: '-ms-flexbox',
+                        display: 'flex'
+                    });
+                    $('#menu').fadeIn().css({
+                        display: '-webkit-box',
+                        display: '-ms-flexbox',
+                        display: 'flex'
+                    });
                     $('#menuLine1')
                         .animate(
                         { deg: 45 },
                         {
                             duration: 300,
                             step: function(now) {
-                                $(this).css({ transform: 'rotate(' + now + 'deg)' });
+                                $(this).css({
+                                    '-webkit-transform': 'rotate(' + now + 'deg)',
+                                    '-ms-transform': 'rotate(' + now + 'deg)',
+                                    transform: 'rotate(' + now + 'deg)'
+                                });
                             }
                         });
                     $('#menuLine2')
@@ -115,7 +131,11 @@ $(document).ready(() => {
                         {
                             duration: 300,
                             step: function(now) {
-                                $(this).css({ transform: 'rotate(' + now + 'deg)' });
+                                $(this).css({
+                                    '-webkit-transform': 'rotate(' + now + 'deg)',
+                                    '-ms-transform': 'rotate(' + now + 'deg)',
+                                    transform: 'rotate(' + now + 'deg)'
+                                });
                             }
                         });
                 }
@@ -134,17 +154,31 @@ $(document).ready(() => {
                     $('#logo').attr('src', '../static/img/logo.svg')
                     $('#startProject').removeClass('white-button').addClass('orange-button');
 
-                    $('#interface').fadeIn().css('display', 'flex');
-                    $('#menuHolder').css('display', 'none');
-                    $('#pageContent, #footer').fadeIn().css('display', 'block');
-                    $('#chatHolder').fadeIn().css('display', 'flex');
+                    $('#interface').fadeIn().css({
+                        display: 'flex',
+                    });
+                    $('#menuHolder').css({
+                        display: 'none'
+                    });
+                    $('#pageContent, #footer').fadeIn().css({
+                        'display': 'block'
+                    });
+                    $('#chatHolder').fadeIn().css({
+                        display: '-webkit-box',
+                        display: '-ms-flexbox',
+                        display: 'flex'
+                    });
                     $('#menuLine1')
                         .animate(
                         { deg: 0 },
                         {
                             duration: 300,
                             step: function(now) {
-                                $(this).css({ transform: 'rotate(' + now + 'deg)' });
+                                $(this).css({
+                                    '-webkit-transform': 'rotate(' + now + 'deg)',
+                                    '-ms-transform': 'rotate(' + now + 'deg)',
+                                    transform: 'rotate(' + now + 'deg)'
+                                });
                             }
                         });
                     $('#menuLine2')
@@ -153,7 +187,11 @@ $(document).ready(() => {
                         {
                             duration: 300,
                             step: function(now) {
-                                $(this).css({ transform: 'rotate(' + now + 'deg)' });
+                                $(this).css({
+                                    '-webkit-transform': 'rotate(' + now + 'deg)',
+                                    '-ms-transform': 'rotate(' + now + 'deg)',
+                                    transform: 'rotate(' + now + 'deg)'
+                                });
                             }
                         }).css('margin-top', window.innerWidth > 1024 ? '8px' : '6px');
                 }
