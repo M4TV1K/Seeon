@@ -1,14 +1,21 @@
-
 #content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-top: 30vh;
 }
 
 #superContentHolder {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 74%;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 #vacationOrangeLine {
@@ -28,8 +35,13 @@
 
 #theForm {
     margin-right: 3vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column nowrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
 }
 
 .input-holder {
@@ -53,6 +65,8 @@
 }
 
 #emailPhoneHolder {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -72,8 +86,13 @@
         display: none;
     }
     #superContentHolder {
-        justify-content: flex-start;
-        flex-flow: column nowrap;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: column nowrap;
+                flex-flow: column nowrap;
     }
     #subHeader {
         width: 31vw;
@@ -94,8 +113,13 @@
     #emailPhoneHolder {
         width: 100%;
         margin-top: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-flow: column nowrap;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: column nowrap;
+                flex-flow: column nowrap;
     }
     #numberHolder {
         margin-left: 0;

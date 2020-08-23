@@ -1,8 +1,14 @@
-
 #toMainPage {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 #toMainPage > .small-text {
@@ -17,14 +23,23 @@
 
 #pageContentHolder {
     margin-top: 22.5vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 #pageContent {
     width: 60%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column nowrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
 }
 
 #briefOrangeLine {
@@ -33,7 +48,10 @@
 }
 
 #briefHeaderHolder {
-    flex-flow: row nowrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
 }
 
 #theForm {
@@ -49,9 +67,16 @@
 }
 
 .buttons-holder {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
 }
 
 #blueServiceRectangle {
@@ -71,7 +96,8 @@ h2, #requestLabel {
 
 .button {
     margin-right: 1.5vw;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .select-button {
@@ -89,8 +115,13 @@ h2, #requestLabel {
 }
 
 #requestHolder {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
 }
 
 #blueContactRectangle {
@@ -105,6 +136,8 @@ h2, #requestLabel {
 
 #contactViaHolder, #emailPhoneHolder, #submitHolder {
     margin-top: 2vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -112,8 +145,12 @@ h2, #requestLabel {
 
 .checkbox-pair {
     margin-right: 1.6vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .checkbox-pair > label {
@@ -121,7 +158,9 @@ h2, #requestLabel {
 }
 
 #submitHolder {
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 #submitRequest {
@@ -171,7 +210,9 @@ input[type='radio']:checked:after {
 
 @media screen and (max-width: 1024px) {
     #pageContentHolder {
-        justify-content: flex-start;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
     }
     #pageContent {
         margin-left: 15vw;
@@ -229,7 +270,9 @@ input[type='radio']:checked:after {
         display: none;
     }
     #pageContentHolder {
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
     #pageContent {
         margin-left: 0;
@@ -267,14 +310,20 @@ input[type='radio']:checked:after {
     }
     #emailPhoneHolder {
         margin: 0;
-        flex-flow: column nowrap;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: column nowrap;
+                flex-flow: column nowrap;
     }
     #numberHolder {
         margin-left: 0;
     }
     #contactViaHolder, #submitHolder {
         margin-top: 10vw;
-        flex-flow: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: column;
+                flex-flow: column;
     }
     .checkbox-pair {
         margin-top: 5vw;

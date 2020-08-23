@@ -1,16 +1,27 @@
 
 #topHolder {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column nowrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
     width: 100%;
     height: 120vh;
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #E3F1F6), color-stop(50%, #FFFFFF));
+    background: -o-linear-gradient(left, #E3F1F6 50%, #FFFFFF 50%);
     background: linear-gradient(to right, #E3F1F6 50%, #FFFFFF 50%);
 }
 
 #headerHolder {
     margin-top: 7.5vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 #theHeader {
@@ -24,14 +35,24 @@
     margin-top: 4.5vw;
     position: relative;
     z-index: 5;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 #ideasTextHolder {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 #ideasText {
@@ -40,8 +61,12 @@
 }
 
 #showreelHolder {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 #showreelText {
@@ -70,9 +95,15 @@
 }
 
 #playButtonHolder {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 3vw;
     height: 3vw;
     position: absolute;
@@ -94,9 +125,16 @@
 
 #scrollDownHolder {
     margin-top: 10vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 #scrollDownHolder > .small-text {
@@ -106,12 +144,16 @@
 @media screen and (max-width: 1024px) {
     #topHolder {
         height: 100vh;
+        background: -webkit-gradient(linear, left top, right top, color-stop(92%, #E3F1F6), color-stop(8%, #FFFFFF));
+        background: -o-linear-gradient(left, #E3F1F6 92%, #FFFFFF 8%);
         background: linear-gradient(to right, #E3F1F6 92%, #FFFFFF 8%);
     }
 
     #headerHolder {
         margin-top: 26.5vw;
-        justify-content: flex-start;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
     }
 
     #theHeader {
@@ -124,12 +166,19 @@
 
     #mainHolder {
         margin-top: 13vw;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
     }
 
     #ideasTextHolder {
-        flex-flow: column nowrap;
-        align-items: flex-start;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: column nowrap;
+                flex-flow: column nowrap;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
     }
     #ideasText, #mobileStartProject {
         margin-left: 12vw;
@@ -166,6 +215,8 @@
 
 @media screen and (max-width: 550px) {
     #topHolder {
+        background: -webkit-gradient(linear, left top, right top, color-stop(84%, #E3F1F6), color-stop(16%, #FFFFFF));
+        background: -o-linear-gradient(left, #E3F1F6 84%, #FFFFFF 16%);
         background: linear-gradient(to right, #E3F1F6 84%, #FFFFFF 16%);
     }
     #ideasText {

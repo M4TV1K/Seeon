@@ -1,17 +1,27 @@
-
 #content {
     margin-top: 25vh;
 }
 
 #superContentHolder {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column nowrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
 }
 
 #topHolder {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 #usTextHolder {
@@ -50,8 +60,12 @@
 
 #seeonHolder {
     position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 #seeonHolder, #thingsRectangle {
@@ -76,9 +90,15 @@
 }
 
 #foundersHolder {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 #foundersHolder, #thingsMatters {
@@ -92,9 +112,16 @@
 }
 
 .founder-holder {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .founder-holder:last-child {
@@ -103,7 +130,8 @@
 
 .founder-photo {
     width: 20vw;
-    box-shadow: 0 25px 50px rgba(75, 87, 92, 0.15);
+    -webkit-box-shadow: 0 25px 50px rgba(75, 87, 92, 0.15);
+            box-shadow: 0 25px 50px rgba(75, 87, 92, 0.15);
 }
 
 .founder-name {
@@ -116,9 +144,15 @@
 }
 
 #thingsMatters {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 #thingsMatters > .header-text {
@@ -132,6 +166,8 @@
 }
 
 #partnersHolder {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -140,20 +176,34 @@
         margin-top: 25vw;
     }
     #topHolder {
-        flex-flow: column nowrap;
-        justify-content: flex-start;
-        align-items: flex-start;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: column nowrap;
+                flex-flow: column nowrap;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
     }
     #topHolder > .the-biggest-text {
         margin-left: 6vw;
     }
     #usTextHolder {
         margin-top: 5vw;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-flow: column nowrap;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: column nowrap;
+                flex-flow: column nowrap;
         width: 100%;
         margin-left: 0;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     #usText1, #usText2 {
         width: 30vw;
@@ -166,8 +216,12 @@
         margin-top: 10vw;
     }
     #seeonHolder {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
     #seeonHolder > .the-biggest-text {
         margin-top: 45vw;
@@ -189,14 +243,19 @@
         margin-top: 10vw;
     }
     #foundersHolder {
-        flex-flow: column nowrap;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: column nowrap;
+                flex-flow: column nowrap;
     }
     #founders {
         font-size: 2.5vw;
         position: static;
     }
     .rotated-text {
-        transform: rotate(0);
+        -webkit-transform: rotate(0);
+            -ms-transform: rotate(0);
+                transform: rotate(0);
     }
     .founder-photo {
         width: 30vw;
@@ -209,7 +268,9 @@
         margin-top: 1.6vw;
     }
     #thingsMatters {
-        justify-content: space-between;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
     }
     #thingsRectangle {
         position: static;
@@ -257,12 +318,21 @@
         margin-right: 41vw;
     }
     #partnersHolder {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: column nowrap;
+                flex-flow: column nowrap;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     .founder-holder {
-        align-items: flex-start;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
     }
     .founder-holder:last-child {
         margin-top: 15vw;
