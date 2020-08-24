@@ -1,11 +1,14 @@
+import binascii
+
 from flask import Flask, render_template, request, redirect
 from flask_mail import Mail, Message
+from werkzeug.exceptions import NotFound
 
 application = Flask(__name__)
 
-application.config['MAIL_SERVER'] = 'smtp.mail.ru'
+application.config['MAIL_SERVER'] = 'mail.hosting.reg.ru'
 application.config['MAIL_PORT'] = 465
-# application.config['MAIL_USE_SSL'] = False
+application.config['MAIL_USE_SSL'] = True
 application.config['USER_ENABLE_AUTH0'] = True
 application.config['MAIL_USERNAME'] = 'info@seeonstudio.com'
 application.config['MAIL_PASSWORD'] = 'SeeonMoney2020'
@@ -70,19 +73,19 @@ def thank_you():
     return render_template('thank_you.html')
 
 
-# @application.errorhandler(NotFound)
-# def page_not_found(e):
-#     return redirect('/sex')
-#
-#
-# @application.errorhandler(binascii.Error)
-# def page_not_found(e):
-#     return redirect('/sex')
-#
-#
-# @application.errorhandler(UnicodeDecodeError)
-# def page_not_found(e):
-#     return redirect('/sex')
+@application.errorhandler(NotFound)
+def page_not_found(e):
+    return redirect('/')
+
+
+@application.errorhandler(binascii.Error)
+def page_not_found(e):
+    return redirect('/')
+
+
+@application.errorhandler(UnicodeDecodeError)
+def page_not_found(e):
+    return redirect('/')
 
 
 if __name__ == '__main__':
