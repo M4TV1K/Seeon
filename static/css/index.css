@@ -237,6 +237,9 @@
 }
 
 @media screen and (max-width: 550px) {
+    #loaderHolder > img {
+        margin-top: 30vh;
+    }
     #topHolder {
         background: -webkit-gradient(linear, left top, right top, color-stop(84%, #E3F1F6), color-stop(16%, #FFFFFF));
         background: -o-linear-gradient(left, #E3F1F6 84%, #FFFFFF 16%);

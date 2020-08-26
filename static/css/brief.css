@@ -154,7 +154,7 @@ h2, #requestLabel {
 }
 
 .checkbox-pair > label {
-    margin-left: 2.2vw;
+    margin-left: 1vw;
 }
 
 #submitHolder {
@@ -180,31 +180,6 @@ h2, #requestLabel {
 .privacy-policy:hover {
     text-decoration: underline;
     color: #ED5434;
-}
-
-input[type='radio'] {
-    width: 0;
-}
-
-input[type='radio']:after, input[type='radio']:checked:after {
-    width: 1.2vw;
-    height: 1.2vw;
-    border-radius: 100px;
-    top: -0.3vw;
-    position: relative;
-    content: '';
-    display: inline-block;
-    visibility: visible;
-    color: white;
-    border: 1px solid;
-}
-
-input[type='radio']:after {
-    border-color: #4B575C;
-}
-input[type='radio']:checked:after {
-    background-color: #F46244;
-    border-color: #F46244;
 }
 
 
@@ -251,7 +226,7 @@ input[type='radio']:checked:after {
         height: 26vw;
     }
     .checkbox-pair > label {
-        margin-left: 3vw;
+        margin-left: 2vw;
     }
     #contactViaHolder, #emailPhoneHolder, #submitHolder {
         margin-top: 3vw;
@@ -333,11 +308,7 @@ input[type='radio']:checked:after {
         margin-top: 0;
     }
     .checkbox-pair > label {
-        margin-left: 8vw;
-    }
-    input[type='radio']:after, input[type='radio']:checked:after {
-        width: 4vw;
-        height: 4vw;
+        margin-left: 5vw;
     }
     #agreement {
         margin-top: 6vw;
