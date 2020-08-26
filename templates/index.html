@@ -17,6 +17,9 @@
 {% endblock %}
 
 {% block body %}
+    <div id="loaderHolder">
+        <img src="{{ url_for('static', filename='img/loader.gif') }}" alt="loader">
+    </div>
     <article id="topHolder">
         <section id="headerHolder">
             <h1 id="theHeader" class="the-biggest-text tenor-sans-font">SEE<span class="tenor-sans-font">ON</span></h1>
@@ -53,10 +56,10 @@
             <div class="what-buttonHolder round-button-holder sm-holder-menu" onclick="openInNewTab('')">
                 <img class="what-button sm-button" src="{{ url_for('static', filename='img/what.svg') }}" alt="What's up button">
             </div>
-            <div class="telegram-buttonHolder round-button-holder sm-holder-menu" onclick="openInNewTab('')">
+            <div class="telegram-buttonHolder round-button-holder sm-holder-menu" onclick="openInNewTab('https://t.me/Seeonstudio')">
                 <img class="telegram-button sm-button" src="{{ url_for('static', filename='img/telegram.svg') }}" alt="Telegram button">
             </div>
-            <div class="fb-buttonHolder round-button-holder sm-holder-menu" onclick="openInNewTab('')">
+            <div class="fb-buttonHolder round-button-holder sm-holder-menu" onclick="openInNewTab('https://www.facebook.com/seeonst/')">
                 <img class="fb-button sm-button"  src="{{ url_for('static', filename='img/fb.svg') }}" alt="Facebook button">
             </div>
             <div class="insta-buttonHolder round-button-holder sm-holder-menu" onclick="openInNewTab('https://instagram.com/seeon_studio?igshid=9w1ekk94wwaf')">

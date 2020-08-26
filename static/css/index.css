@@ -1,4 +1,22 @@
 
+#loaderHolder {
+    z-index: 20;
+    background-color: #fbfbfb;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+#loaderHolder > img {
+    margin-top: 30vh;
+    width: 15vw;
+    height: 15vw;
+}
+
 #topHolder {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -142,6 +160,11 @@
 }
 
 @media screen and (max-width: 1024px) {
+    #loaderHolder > img {
+        margin-top: 36vh;
+        width: 20vh;
+        height: 20vh;
+    }
     #topHolder {
         height: 100vh;
         background: -webkit-gradient(linear, left top, right top, color-stop(92%, #E3F1F6), color-stop(8%, #FFFFFF));

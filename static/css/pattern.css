@@ -459,19 +459,19 @@ textarea {
     margin-left: 1vw;
 }
 
-.number > a, .privacy-policy {
+#mailLink, .number > a, .privacy-policy {
     text-decoration: none;
     cursor: pointer;
 }
 
-.number > a:link, .privacy-policy {
+#mailLink:link, .number > a:link, .privacy-policy {
     color: #4B575C;
 }
-.number > a:visited, .privacy-policy {
+#mailLink:visited, .number > a:visited, .privacy-policy {
     color: #4B575C;
 }
 
-.number > a:hover, .privacy-policy:hover {
+#mailLink:hover, .number > a:hover, .privacy-policy:hover {
     color: #F46244;
     text-decoration: underline;
 }
