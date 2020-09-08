@@ -21,12 +21,6 @@
             <button id="startProject" class="button orange-button" onclick="openPage('brief')">Начать проект</button>
         </nav>
     </article>
-    {#<div id="chatHolder">
-        <div id="chat"></div>
-        <div id="chatButtonHolder" class="round-button-holder">
-            <img id="chatButton" src="{{ url_for('static', filename='img/chat-button.svg') }}" alt="chat button">
-        </div>
-    </div>#}
     <article id="pageContent">
         {% block body %}{% endblock %}
     </article>
@@ -34,9 +28,8 @@
         <article id="menuSpreader">
             <section id="menu">
                 <nav id="menuNav">
-                    <p class="menu-buttons tenor-sans-font" onclick="openPage()">Главная</p>
                     <p class="menu-buttons tenor-sans-font" onclick="openPage('we')">Мы</p>
-                    {#<p class="menu-buttons tenor-sans-font" onclick="openPage('cases')">Кейсы</p>#}
+                    <p class="menu-buttons tenor-sans-font" onclick="openPage('cases')">Кейсы</p>
                     <p class="menu-buttons tenor-sans-font" onclick="openPage('contacts')">Контакты</p>
                     <p class="menu-buttons tenor-sans-font" onclick="openPage('vacations')">Вакансии</p>
                     <button id="menuStartProject" class="mobile button" onclick="openPage('brief')">Начать проект</button>

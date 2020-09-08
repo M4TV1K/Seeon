@@ -1,0 +1,82 @@
+#content {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+#bigBigHeader {
+    z-index: 2;
+    font-size: 4vw;
+    left: 0;
+    top: 16vw;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    font-family: TenorSans-Regular, sans-serif;
+}
+
+.full-image, .part-image-holder, .part-image {
+    filter: brightness(80%);
+}
+
+.full-image, .part-image {
+    width: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+}
+
+.part-image-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 110vh;
+}
+
+.part-image {
+    width: 63%;
+}
+
+#rolexHolder {
+    background: #516955;
+}
+#manorHolder {
+    background: #6C6B81;
+}
+#jetHolder {
+    background: #FFF1E6;
+}
+#carHolder {
+    background: #CCCBB5;
+}
+#wineHolder {
+    background: #E6D6D6;
+}
+
+
+@media screen and (max-width: 1024px) {
+    #bigBigHeader {
+        font-size: 9vw;
+        top: 43.5vw;
+    }
+    .part-image-holder {
+        height: 42vh;
+    }
+    .part-image {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .part-image-holder {
+        height: 36vh;
+    }
+    .part-image {
+        width: 80%;
+    }
+    #bigBigHeader {
+        font-size: 11vw;
+        top: 41vw;
+    }
+}

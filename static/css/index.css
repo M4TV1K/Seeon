@@ -2,8 +2,12 @@
 #loaderHolder {
     z-index: 20;
     background-color: #fbfbfb;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     top: 0;
     left: 0;
     position: absolute;

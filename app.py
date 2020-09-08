@@ -48,6 +48,11 @@ def contacts():
     return render_template('index.html', contact=True, to_contact=True)
 
 
+@application.route('/cases')
+def cases():
+    return render_template('cases.html')
+
+
 @application.route('/brief', methods=['GET', 'POST'])
 def brief():
     if request.method == 'POST':
