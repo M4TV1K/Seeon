@@ -1,3 +1,4 @@
+
 #content {
     margin-top: 25vh;
 }
@@ -24,9 +25,18 @@
             align-items: center;
 }
 
+#usHeader {
+    left: 25vw;
+}
+
+#usHeaderMobile, #seeonHeaderMobile {
+    display: none;
+}
+
 #usTextHolder {
+    z-index: 1;
     width: 50%;
-    position: static;
+    position: relative;
     margin-left: 5vw;
     padding-top: 5vw;
     padding-bottom: 9vw;
@@ -52,10 +62,14 @@
     margin-top: 6vw;
 }
 
+#weCreateHolder {
+    height: 7vw;
+}
+
 #weCreateHolder > .the-biggest-text {
+    width: 100vw;
     color: #E3E3E3;
-    font-size: 8vw; /*TODO REMOVE WHEN ANIMATION ARRIVES*/
-    text-align: center; /*SAME REMOVE*/
+    font-size: 7vw;
 }
 
 #seeonHolder {
@@ -172,6 +186,18 @@
 }
 
 @media screen and (max-width: 1024px) {
+    #usHeader, #seeonHeader {
+        display: none;
+    }
+    #usHeaderMobile, #seeonHeaderMobile {
+        display: block;
+    }
+    #weCreateHolder {
+        height: 8vw;
+    }
+    #weCreateHolder > .the-biggest-text {
+        width: 90vw;
+    }
     #content {
         margin-top: 25vw;
     }
@@ -191,7 +217,7 @@
         margin-left: 6vw;
     }
     #usTextHolder {
-        margin-top: 5vw;
+        margin-top: 17vw;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -285,7 +311,7 @@
 
 @media screen and (max-width: 550px) {
     #topHolder > .the-biggest-text {
-        margin-left: 9%;
+        margin-left: 0;
     }
     #content {
         margin-top: 35vw;
@@ -299,13 +325,17 @@
         padding-bottom: 15vw;
     }
     #usTextHolder {
-        margin-top: 8vw;
+        margin-top: 23vw;
+    }
+    #weCreateHolder {
+        height: 12vw;
     }
     #weCreateHolder, #seeonHolder, #foundersHolder, #thingsMatters {
         margin-top: 20vw;
     }
     #weCreateHolder > .the-biggest-text {
         font-size: 12vw;
+        width: 145vw;
     }
     #usText3, #usText4 {
         width: 61vw;

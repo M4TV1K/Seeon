@@ -1,4 +1,6 @@
 
+let animating = true;
+
 function openPage(link = "") {
     window.location.href = '/' + link;
 }
@@ -52,6 +54,23 @@ function addZoomInOutHover(element, imgIn = 'none', imgOut = 'none', horizontal 
     });
 }
 
+function isOverflow(px, width) {
+    const value = parseFloat(px.substring(0, px.length - 2));
+    return value < -width;
+}
+
+function scrollText(element, rightEdge = 100) {
+    $('#' + element).animate({
+        left: "-=0.2vw"
+    }, 1);
+    if (isOverflow($('#' + element).css('left'), $('#' + element).innerWidth())) {
+        $('#' + element).css("left", rightEdge + "vw");
+    }
+    requestAnimationFrame(() => {
+        scrollText(element, rightEdge)
+    });
+}
+
 $(document).ready(() => {
     addZoomInOutHover('#instaButtonMenu');
     addZoomInOutHover('#fbButtonMenu');
@@ -84,6 +103,7 @@ $(document).ready(() => {
 
     $('#menuButton').click(() => {
         if ($('#menuHolder').css('display') === 'none') {
+            animating = false;
             $('#pageContent, #footer').css('display', 'none');
             $('#interface').css('display', 'none');
             $('#chatHolder').css('display', 'none');
@@ -150,6 +170,7 @@ $(document).ready(() => {
             }, {
                 duration: 420,
                 complete: () => {
+                    animating = true;
                     addLogoHover();
                     $('#logo').attr('src', '../static/img/logo.svg')
                     $('#startProject').removeClass('white-button').addClass('orange-button');

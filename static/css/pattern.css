@@ -19,6 +19,12 @@ html, body {
     scrollbar-width: none;  /* Firefox */
 }
 
+#SUPERCONTENTHOLDER {
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -38,6 +44,10 @@ textarea {
     background: #F7F7F7;
     border: none;
     outline: none;
+}
+
+.floating-text {
+    position: absolute;
 }
 
 .text-input {
@@ -400,7 +410,7 @@ input[type=text], input[type=email] {
 }
 
 #footer {
-    padding-top: 20vh;
+    padding-top: 25vh;
 }
 
 #contactsHolder {

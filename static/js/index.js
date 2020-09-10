@@ -70,10 +70,6 @@ $(document).ready(() => {
     document.addEventListener("fullscreenchange",() => {
         if(!document.fullscreenElement) exitFullscreen();
     }, false);
-
-    setTimeout(() => {
-        $("#loaderHolder").fadeOut().css('display', 'none');
-    },2000);
 })
 
 $(window).scroll(() => {
