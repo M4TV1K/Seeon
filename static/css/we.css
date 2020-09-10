@@ -26,12 +26,18 @@
             align-items: center;
 }
 
-#usHeader, #usHeaderMobile, #weCreateHeader, #seeonHeader, #seeonHeaderMobile {
-    left: 50vw;
+#weCreateHolder {
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
 }
 
-#usHeaderMobile, #seeonHeaderMobile {
-    display: none;
+#weCreateHeader {
+    left: 25vw;
+}
+
+#weCreateHeader2 {
+    left: 125vw;
 }
 
 #usTextHolder {
@@ -187,18 +193,6 @@
 }
 
 @media screen and (max-width: 1024px) {
-    #usHeader, #seeonHeader {
-        display: none;
-    }
-    #usHeaderMobile, #seeonHeaderMobile {
-        display: block;
-    }
-    #weCreateHolder {
-        height: 8vw;
-    }
-    #weCreateHolder > .the-biggest-text {
-        width: 90vw;
-    }
     #content {
         margin-top: 25vw;
     }
@@ -311,8 +305,11 @@
 }
 
 @media screen and (max-width: 550px) {
+    #weCreateHolder {
+        height: 12vw;
+    }
     #topHolder > .the-biggest-text {
-        margin-left: 0;
+        margin-left: 13vw;
     }
     #content {
         margin-top: 35vw;
@@ -328,15 +325,15 @@
     #usTextHolder {
         margin-top: 23vw;
     }
-    #weCreateHolder {
-        height: 12vw;
-    }
     #weCreateHolder, #seeonHolder, #foundersHolder, #thingsMatters {
         margin-top: 20vw;
     }
     #weCreateHolder > .the-biggest-text {
         font-size: 12vw;
-        width: 145vw;
+        width: 80vw
+    }
+    .floating-text > a {
+        display: none;
     }
     #usText3, #usText4 {
         width: 61vw;

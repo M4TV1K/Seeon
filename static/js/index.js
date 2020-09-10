@@ -71,8 +71,8 @@ $(document).ready(() => {
         if(!document.fullscreenElement) exitFullscreen();
     }, false);
     scrollText('ourWorks');
-})
-
+    scrollText('ourWorks2');
+});
 $(window).scroll(() => {
     if (window.scrollY > 400) $('#scrollDownHolder').fadeOut();
 });

@@ -55,6 +55,8 @@
             align-items: center;
 }
 
+
+
 #ideasText {
     width: 33vw;
     margin-left: 19.5vw;
@@ -153,16 +155,14 @@
     text-align: center;
 }
 
-#ourWorksMobile {
-    display: none;
-}
-
 #casesHolder {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
     margin-top: 25vh;
+    position: relative;
+    overflow: hidden;
 }
 
 #cases {
@@ -181,17 +181,25 @@
     position: absolute;
 }
 
-#ourWorks {
-    left: 0;
-    width: 65vw;
+#ourWorks, #ourWorks2 {
+    left: 0vw;
+    width: 76vw;
     z-index: -1;
+}
+
+#ourWorks2 {
+    left: 90vw;
+}
+
+#rolexImgMobile {
+    display: none;
 }
 
 @media screen and (max-width: 1024px) {
     #casesHolder {
         margin-top: 20vw;
     }
-    #ourWorks {
+    #ourWorks, #ourWorks2 {
         width: 90vw;
     }
     #rolexImg {
@@ -274,20 +282,27 @@
 }
 
 @media screen and (max-width: 550px) {
+    #rolexImg {
+        display: none;
+    }
+    #rolexImgMobile {
+        display: block;
+        width: 85vw;
+        height: 85vw;
+        -webkit-filter: brightness(80%);
+            filter: brightness(80%);
+    }
     #casesHolder {
         margin-top: 30vw;
     }
     #rolexImg {
         width: 100vw;
     }
-    #ourWorks {
+
+    #ourWorks, #ourWorks2 {
         display: none;
     }
-    #ourWorksMobile {
-        text-align: center;
-        display: block;
-        margin-bottom: 2.5vw;
-    }
+
     #loaderHolder > img {
         margin-top: 30vh;
     }
