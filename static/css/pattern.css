@@ -947,7 +947,7 @@ input[type=text], input[type=email] {
         height: 10vw;
     }
     #languageSMHolder {
-        margin-top: 20.5vw;
+        margin-top: 15vw;
     }
     .language-slash {
         margin: 0 6vw;
@@ -961,6 +961,6 @@ input[type=text], input[type=email] {
         height: 18vw;
     }
     #menu {
-        margin-top: 30vw;
+        margin-top: 15vh;
     }
 }
