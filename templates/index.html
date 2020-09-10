@@ -56,12 +56,20 @@
             <div class="telegram-buttonHolder round-button-holder sm-holder-menu" onclick="openInNewTab('https://t.me/Seeonstudio')">
                 <img class="telegram-button sm-button" src="{{ url_for('static', filename='img/telegram.svg') }}" alt="Telegram button">
             </div>
-            <div class="fb-buttonHolder round-button-holder sm-holder-menu" onclick="openInNewTab('https://www.facebook.com/seeonst/')">
+            <div class="fb-buttonHolder round-button-holder sm-holder-menu" onclick="openInNewTab('https://www.facebook.com/seeondigital')">
                 <img class="fb-button sm-button"  src="{{ url_for('static', filename='img/fb.svg') }}" alt="Facebook button">
             </div>
             <div class="insta-buttonHolder round-button-holder sm-holder-menu" onclick="openInNewTab('https://instagram.com/seeon_studio?igshid=9w1ekk94wwaf')">
                 <img class="insta-button sm-button" src="{{ url_for('static', filename='img/insta.svg') }}" alt="Instagram button">
             </div>
+        </section>
+    </article>
+    <article id="casesHolder">
+        <h1 id="ourWorksMobile" class="the-biggest-text tenor-sans-font blue">OUR WORKS</h1>
+        <section id="cases">
+            <h1 id="ourWorks" class="the-biggest-text tenor-sans-font blue floating-text">OUR WORKS</h1>
+            <img id="rolexImg" src="{{ url_for('static', filename='img/rolex.png') }}" alt="rolex-photo">
+            <button id="watchButton" class="big-round-button" onclick="openPage('cases')">Смотреть</button>
         </section>
     </article>
 {% endblock %}

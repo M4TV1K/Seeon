@@ -137,11 +137,56 @@
             align-items: center;
 }
 
+#casesHolder, #cases {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #scrollDownHolder > .small-text {
     text-align: center;
 }
 
+#ourWorksMobile {
+    display: none;
+}
+
+#casesHolder {
+    flex-flow: column nowrap;
+    margin-top: 25vh;
+}
+
+#cases {
+    position: relative;
+    z-index: 1;
+}
+
+
+#rolexImg {
+    width: 70vw;
+    filter: brightness(80%);
+}
+
+#watchButton {
+    position: absolute;
+}
+
+#ourWorks {
+    left: 0;
+    width: 65vw;
+    z-index: -1;
+}
+
 @media screen and (max-width: 1024px) {
+    #casesHolder {
+        margin-top: 20vw;
+    }
+    #ourWorks {
+        width: 90vw;
+    }
+    #rolexImg {
+        width: 80vw;
+    }
     #loaderHolder > img {
         margin-top: 36vh;
         width: 20vh;
@@ -219,6 +264,20 @@
 }
 
 @media screen and (max-width: 550px) {
+    #casesHolder {
+        margin-top: 30vw;
+    }
+    #rolexImg {
+        width: 100vw;
+    }
+    #ourWorks {
+        display: none;
+    }
+    #ourWorksMobile {
+        text-align: center;
+        display: block;
+        margin-bottom: 2.5vw;
+    }
     #loaderHolder > img {
         margin-top: 30vh;
     }

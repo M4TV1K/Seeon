@@ -1,5 +1,6 @@
 
 #content {
+    overflow-x: hidden;
     margin-top: 25vh;
 }
 
@@ -25,8 +26,8 @@
             align-items: center;
 }
 
-#usHeader {
-    left: 25vw;
+#usHeader, #usHeaderMobile, #weCreateHeader, #seeonHeader, #seeonHeaderMobile {
+    left: 50vw;
 }
 
 #usHeaderMobile, #seeonHeaderMobile {

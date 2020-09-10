@@ -70,6 +70,7 @@ $(document).ready(() => {
     document.addEventListener("fullscreenchange",() => {
         if(!document.fullscreenElement) exitFullscreen();
     }, false);
+    scrollText('ourWorks');
 })
 
 $(window).scroll(() => {

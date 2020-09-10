@@ -46,6 +46,24 @@ textarea {
     outline: none;
 }
 
+.big-round-button {
+    width: 8.5vw;
+    height: 8.5vw;
+    border: 1px solid white;
+    background: none;
+    cursor: pointer;
+    border-radius: 100px;
+    color: white;
+    font-family: TenorSans-Regular, sans-serif;
+    outline: none;
+}
+
+.big-round-button:hover {
+    border-color: #F46244;
+    background-color: #F46244;
+}
+
+
 .floating-text {
     position: absolute;
 }
@@ -625,6 +643,10 @@ input[type=text], input[type=email] {
         width: 60%;
         height: 15vw;
     }
+    .big-round-button {
+        width: 14vw;
+        height: 14vw;
+    }
     .placeholder-label {
         top: 3vw;
         left: 2vw;
@@ -823,6 +845,10 @@ input[type=text], input[type=email] {
 @media screen and (max-width: 550px) {
     h1, h2, p, li, td, label, select, option, input, button, textarea, span {
         font-size: 3.75vw;
+    }
+    .big-round-button {
+        width: 28vw;
+        height: 28vw;
     }
     .input-holder {
         height: 14vw;
