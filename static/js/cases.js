@@ -5,7 +5,7 @@ function animation() {
     if (animating) {
         if (direction) window.scrollBy(0, speed);
         else window.scrollBy(0, -speed);
-        if ($(window).scrollTop() + $(window).height() + 10 >= $(document).height()) {
+        if ($(window).scrollTop() + $(window).height() + 75 >= $(document).height()) {
             changeDirection();
         }
         else if ($(window).scrollTop() === 0) changeDirection();
