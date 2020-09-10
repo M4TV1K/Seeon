@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: "Futura PT light";
     src: url('../font/FuturaPT-Light.ttf');
@@ -21,6 +22,8 @@ html, body {
 
 #SUPERCONTENTHOLDER {
     width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     overflow: hidden;
 }

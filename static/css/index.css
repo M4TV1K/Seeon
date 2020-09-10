@@ -9,8 +9,8 @@
             flex-flow: column nowrap;
     width: 100%;
     height: 120vh;
-    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #E3F1F6), color-stop(50%, #FFFFFF));
     background: -o-linear-gradient(left, #E3F1F6 50%, #FFFFFF 50%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #E3F1F6), color-stop(50%, #FFFFFF));
     background: linear-gradient(to right, #E3F1F6 50%, #FFFFFF 50%);
 }
 
@@ -138,9 +138,15 @@
 }
 
 #casesHolder, #cases {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 #scrollDownHolder > .small-text {
@@ -152,7 +158,10 @@
 }
 
 #casesHolder {
-    flex-flow: column nowrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
     margin-top: 25vh;
 }
 
@@ -164,7 +173,8 @@
 
 #rolexImg {
     width: 70vw;
-    filter: brightness(80%);
+    -webkit-filter: brightness(80%);
+            filter: brightness(80%);
 }
 
 #watchButton {
@@ -194,8 +204,8 @@
     }
     #topHolder {
         height: 100vh;
-        background: -webkit-gradient(linear, left top, right top, color-stop(92%, #E3F1F6), color-stop(8%, #FFFFFF));
         background: -o-linear-gradient(left, #E3F1F6 92%, #FFFFFF 8%);
+        background: -webkit-gradient(linear, left top, right top, color-stop(92%, #E3F1F6), color-stop(8%, #FFFFFF));
         background: linear-gradient(to right, #E3F1F6 92%, #FFFFFF 8%);
     }
 
@@ -282,8 +292,8 @@
         margin-top: 30vh;
     }
     #topHolder {
-        background: -webkit-gradient(linear, left top, right top, color-stop(84%, #E3F1F6), color-stop(16%, #FFFFFF));
         background: -o-linear-gradient(left, #E3F1F6 84%, #FFFFFF 16%);
+        background: -webkit-gradient(linear, left top, right top, color-stop(84%, #E3F1F6), color-stop(16%, #FFFFFF));
         background: linear-gradient(to right, #E3F1F6 84%, #FFFFFF 16%);
     }
     #ideasText {
