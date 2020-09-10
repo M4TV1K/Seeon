@@ -16,6 +16,7 @@ application.config['MAIL_DEFAULT_SENDER'] = 'info@seeonstudio.com'
 mail = Mail(application)
 
 
+
 @application.route('/')
 def index():
     return render_template('index.html', contact=True)
