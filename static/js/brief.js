@@ -1,7 +1,7 @@
 
 let services = [];
 
-function remove( element) {
+function remove(element) {
     const index = services.indexOf(element)
     services.splice(index, 1)
 }

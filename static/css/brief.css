@@ -102,6 +102,7 @@ h2, #requestLabel {
 }
 
 .select-button {
+    border: 1px solid #FFFFFF;
     background: #FFFFFF;
 }
 
